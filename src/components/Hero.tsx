@@ -146,8 +146,12 @@ const Hero = () => {
             <span className="block">Business Growth</span>
           </motion.h1>
           
-          <motion.h2 className="mt-3 mx-auto text-xl sm:text-2xl md:mt-4 text-gray-600 whitespace-nowrap" variants={itemVariants}>Digital Transformation | Managed IT Services | Enterprise Software</motion.h2>
-          
+          <motion.h2
+            className="mt-3 mx-auto text-xl sm:text-2xl md:mt-4 text-gray-600 whitespace-normal sm:whitespace-nowrap text-center"
+            variants={itemVariants}
+          >
+            Digital Transformation | Enterprise Platforms | Custom Software Development
+          </motion.h2>          
           <motion.p 
             className="mt-3 max-w-md mx-auto text-base text-gray-500 sm:text-lg md:mt-5 md:text-xl md:max-w-3xl"
             variants={itemVariants}
