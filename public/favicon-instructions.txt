@@ -1,0 +1,9 @@
+How to Add Your Elovient Logo as Favicon
+
+1. Save the purple Elovient logo you've attached in the chat
+2. Name it "favicon.png"
+3. Place it in this directory (ElovientWebsite/public/)
+4. Make sure its size is appropriate for a favicon (32x32 or 64x64 pixels)
+5. If needed, use an online tool like favicon.io to optimize it
+
+The website is already configured to use this file as the favicon. 

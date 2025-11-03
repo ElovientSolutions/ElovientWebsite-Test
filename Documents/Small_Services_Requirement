@@ -1,0 +1,604 @@
+# Services Pack V3
+
+## Service Categories Overview
+
+### 1. AI Chatbot Integration Packages
+- **Starter Pack** – "Smart Greeting Bot"
+- **Growth Pack** – "Engage & Guide Bot"
+- **Pro Pack** – "AI Assistant Bot"
+
+### 2. E-commerce Store Setup Packages
+- **Starter Pack** – "Launch Essentials"
+- **Growth Pack** – "Sell Smart"
+- **Pro Pack** – "Scale & Automate"
+
+### 3. Website Hosting & Domain Setup Packages
+- **Starter Pack** – "Hosting Essentials"
+- **Growth Pack** – "Domain Setup Pro"
+- **Pro Pack** – "Full Web Foundation"
+
+### 4. Mobile Responsiveness Optimization Packages
+- **Starter Pack** – "Fix the Basics"
+- **Growth Pack** – "Smooth Experience"
+- **Pro Pack** – "Mobile-First Transformation"
+
+### 5. Website Performance Optimization Packages
+- **Starter Pack** – "Speed Basics"
+- **Growth Pack** – "Enhanced Performance"
+- **Pro Pack** – "Blazing Fast Web"
+
+### 6. Analytics Setup & Reporting Packages
+- **Starter Pack** – "Essential Tracking"
+- **Growth Pack** – "Insightful Reporting"
+- **Pro Pack** – "Data-Driven Excellence"
+
+### 7. Online Booking System
+- **Starter Pack** – "Quick Start Booking"
+- **Growth Pack** – "Smart Scheduling Suite"
+- **Pro Pack** – "Full Booking Automation Pro"
+
+### 8. Landing Page for Campaigns or Events Packages
+- **Starter Pack** – "Launch Lite"
+- **Growth Pack** – "Conversion Booster"
+- **Pro Pack** – "Conversion Command Center"
+
+### 9. Email Newsletter System Setup Packages
+- **Starter Pack** – "Newsletter Kickoff"
+- **Growth Pack** – "Engage & Grow"
+- **Pro Pack** – "Automated Email Engine"
+
+### 10. Mobile App from Existing Website Packages
+- **Starter Pack** – "Web-to-App Lite"
+- **Growth Pack** – "Engage App"
+- **Pro Pack** – "Launch & Scale App"
+
+### 11. Digital Menu or Service Catalog Builder Packages
+- **Starter Pack** – "Digital View Only"
+- **Growth Pack** – "Smart Interactive Catalog"
+- **Pro Pack** – "Order-Enabled Catalog"
+
+### 12. Online Course or Workshop Setup Packages
+- **Starter Pack** – "Launch Essentials"
+- **Growth Pack** – "Sell & Track"
+- **Pro Pack** – "Full Learning Suite"
+
+### 13. Online Payment Gateway Integration Packages
+- **Starter Pack** – "Essential Checkout"
+- **Growth Pack** – "Smart Transactions"
+- **Pro Pack** – "Complete Payment Suite"
+
+### 14. Chat-Based AI Over User Data Packages
+- **Starter Pack** – "AskMyData: Basic"
+- **Growth Pack** – "AskMyData: Smart"
+- **Pro Pack** – "AskMyData: Pro Agent"
+
+---
+
+## Detailed Service Descriptions
+
+## 1. AI Chatbot Integration – Packages
+
+### 1. Starter Pack – "Smart Greeting Bot"
+**Best for:** Businesses that want a simple website chatbot to answer FAQs or collect leads 24/7.
+
+**Features Included:**
+- **Chatbot Widget Integration** (Embedded on your website or landing page)
+- **Predefined FAQs / Greeting Messages** (Up to 10 scripted question-answer flows)
+- **Lead Capture Form Inside Chat** (Collect name, email, phone – auto-save to your inbox or Google Sheet)
+- **Basic Branding** (Logo, name, welcome message customization)
+- **Mobile-Friendly UI** (Works on phones and tablets)
+
+**Timeline:** 2-3 days
+
+### 2. Growth Pack – "Engage & Guide Bot"
+**Best for:** Businesses looking to engage users intelligently, guide them to services, and manage initial support queries.
+
+**Includes everything in Starter Pack, PLUS:**
+- **Dynamic Response Flows** (Up to 25 intents, using button-based navigation or smart replies)
+- **Custom Bot Persona** (Give your bot a name, tone, and brand-aligned voice)
+- **Multi-Language Support (Optional)** (Support for 2 languages – e.g., English & Hindi)
+- **Live Chat Handoff Option** (User can request a human, and you get notified via email or app)
+- **Basic Analytics Dashboard** (View chat volume, clicks, and lead collection rate)
+- **Integration with Google Sheets or Email Tool** (Send collected leads to your CRM or newsletter list)
+
+**Timeline:** 4-5 days
+
+### 3. Pro Pack – "AI Assistant Bot"
+**Best for:** Businesses or platforms looking for a fully automated, intelligent chatbot with AI responses and system integrations.
+
+**Includes everything in Growth Pack, PLUS:**
+- **GPT-Powered Chatbot Setup** (Train on your website content, PDFs, product info, etc.)
+- **Custom Knowledge Base Upload** (Upload multiple docs, FAQs, or helpdesk articles for training)
+- **CRM/Database Integration** (Send lead or support ticket data to tools like Notion, Hubspot, Airtable, etc.)
+- **E-commerce/Product Navigation Flow (Optional)** (Bot can recommend services, packages, or products based on user input)
+- **Voice Input (Optional)** (Let users speak instead of type – great for mobile users)
+- **Advanced Bot Analytics Dashboard** (Track individual user journeys, common questions, bounce/drop points)
+- **Multi-Page Website Coverage** (Bot can answer based on context from multiple URLs)
+- **Custom Domain & White-Label Option** (Remove branding from the bot widget)
+
+**Timeline:** 6-8 days
+
+---
+
+## 2. E-commerce Store Setup – Packages
+
+### 1. Starter Pack – "Launch Essentials"
+**Best for:** New or small businesses starting to sell online with just a few products and a need for a clean, basic store.
+
+**Features Included:**
+- **Responsive E-commerce Website** (1 Home page + 1 Product Category page + Product detail pages)
+- **Add Up to 10 Products** (With product images, price, and description)
+- **Shopping Cart & Checkout Flow** (Simple flow with one-step checkout)
+- **Basic Payment Gateway Integration** (Razorpay, Stripe, or PayPal setup)
+- **Order Notification Email Setup** (Email alerts for both customer and store admin)
+- **Mobile-Optimized Design** (Easy browsing and checkout on phones)
+- **Basic Branding** (Logo, colors, favicon, and fonts)
+
+**Timeline:** 5-7 working days
+
+### 2. Growth Pack – "Sell Smart"
+**Best for:** D2C brands or growing businesses that need automation, variety in product types, and user engagement tools.
+
+**Includes everything in Starter Pack, PLUS:**
+- **Add Up to 50 Products** (Bulk upload with categories, tags, stock info, variants like size/color)
+- **Advanced Filtering & Search Functionality** (Category, price range, tags, etc.)
+- **Coupon/Discount Code Feature** (Create time-bound or product-based offers)
+- **Email List Integration** (Mailchimp, Brevo, etc.)
+- **Blog / Announcement Section** (Keep your users informed and boost SEO)
+- **Cart Abandonment Email Setup** (Remind users to complete their purchase)
+- **Shipping Rate & Tax Settings** (Configure by location, weight, or price)
+
+**Timeline:** 7-10 working days
+
+### 3. Pro Pack – "Scale & Automate"
+**Best for:** High-volume sellers or brands needing deep integrations, reporting, and long-term scalability.
+
+**Includes everything in Growth Pack, PLUS:**
+- **Unlimited Product Upload & Management** (Including product bundles, pre-orders, or digital downloads)
+- **Inventory Management Setup** (Track product quantities, backorders, and auto-stock alerts)
+- **Multi-Currency & Multi-Language Support** (For international audiences)
+- **Sales Dashboard & Custom Reports** (Track sales, refunds, customer behavior, etc.)
+- **Integrated Reviews/Rating System** (Collect user reviews with photo uploads)
+- **Wishlist & Recently Viewed Items Section** (Boost engagement and conversions)
+- **Advanced Marketing Integrations** (Facebook Pixel, Google Analytics 4, Meta & Google Shopping Feeds)
+- **WhatsApp Order Inquiry/Support Button** (Chat directly from the store)
+- **Custom Domain Setup & SEO Optimization** (Improve discoverability and professionalism)
+
+**Timeline:** 10-14 working days
+
+---
+
+## 3. Website Hosting & Domain Setup – Packages
+
+### 1. Starter Pack – "Hosting Essentials"
+**Best for:** Clients who already have a domain but need help setting up fast and secure hosting.
+
+**Features Included:**
+- **Web Hosting Setup** (Choose from providers like Hostinger, SiteGround, Bluehost, etc.)
+- **Connect Hosting to Existing Domain** (DNS records, A record, nameserver configuration)
+- **SSL Certificate Installation** (Secure HTTPS setup for your website)
+- **Basic Email Account Setup** (e.g., info@yourdomain.com)
+- **cPanel or Dashboard Walkthrough** (with login credentials handed over securely)
+- **Performance Optimization Tips** (Caching setup, basic speed boost)
+
+**Timeline:** 1-2 days
+
+### 2. Growth Pack – "Domain Setup Pro"
+**Best for:** Clients who don't have a domain yet and need help purchasing and configuring it.
+
+**Features Included:**
+- **Domain Name Consultation** (Help picking the right domain name if needed)
+- **Domain Purchase Assistance** (From GoDaddy, Namecheap, Google Domains, etc.)
+- **DNS Management Setup** (Zone records, email forwarding, SPF/DMARC records)
+- **Email Forwarding Setup** (e.g., forward contact@yourdomain.com to Gmail)
+- **WHOIS Privacy Protection Setup (Optional)** (to hide personal info)
+- **Domain Connection to Existing Website** (If needed – e.g., Webflow, Wix, WordPress)
+
+**Timeline:** 1-2 days
+
+### 3. Pro Pack – "Full Web Foundation"
+**Best for:** Clients starting from scratch who need both domain and hosting configured professionally.
+
+**Includes Everything in Starter & Growth Pack, PLUS:**
+- **End-to-End Setup: Hosting + Domain + SSL** (Get your site live and secure, from purchase to deployment)
+- **Custom Email Setup** (Configure custom emails using Zoho, Google Workspace, or hosting provider)
+- **Connect to Website Builder or CMS** (WordPress, Webflow, Wix, or custom)
+- **Performance Optimization Setup** (CDN, cache plugin, and speed tips)
+- **Backup System Setup** (Basic regular backups if CMS allows)
+- **Control Panel Training** (Video or guide on managing hosting and domain)
+- **Priority Support** (7-day post-launch support for troubleshooting or changes)
+
+**Timeline:** 2-3 days
+
+---
+
+## 4. Mobile Responsiveness Optimization – Packages
+
+### 1. Starter Pack – "Fix the Basics"
+**Best for:** Clients with a few key pages breaking on mobile or minor layout issues.
+
+**Features Included:**
+- **Audit of Mobile Layout** (Check up to 3 core pages: homepage, product page, contact/about page)
+- **Fix Common Layout Issues** (Text overflow, buttons off-screen, alignment problems)
+- **Touch-Friendly Adjustments** (Increase tappable areas for buttons and forms)
+- **Image Scaling Fixes** (Ensure images scale and don't break layout)
+- **Basic Mobile Menu Alignment** (Hamburger menu or simplified header adjustments)
+- **Viewport Tag Fix** (Ensure proper mobile scaling with meta tags)
+- **Devices Tested On:** Mobile (iOS & Android phones)
+
+**Timeline:** 2-3 working days
+
+### 2. Growth Pack – "Smooth Experience"
+**Best for:** Clients with multi-page websites that need clean, consistent mobile experience throughout.
+
+**Includes Everything in Starter Pack, PLUS:**
+- **Responsive Fixes for Up to 10 Pages** (Include homepage, services, blog, etc.)
+- **Navigation & Menu Enhancements** (Mobile menu behavior, sticky headers, etc.)
+- **Form Optimization** (Ensure contact or sign-up forms work seamlessly on mobile)
+- **Font & Spacing Adjustments for Readability** (Proper padding, font sizing, and spacing)
+- **Mobile-Friendly Tables and Lists** (Reformat tables/lists to fit screen without breaking)
+- **Before/After Preview or Screen Recording for Review** (To compare improvements clearly)
+- **Devices Tested On:** iOS & Android (phones + small tablets)
+
+**Timeline:** 3-5 working days
+
+### 3. Pro Pack – "Mobile-First Transformation"
+**Best for:** Clients with large or older websites needing full-scale mobile-first optimization across all templates and user journeys.
+
+**Includes Everything in Growth Pack, PLUS:**
+- **Full-Site Mobile Optimization (Unlimited Pages)** (Complete site reviewed and made responsive – including blogs, galleries, products, checkout, etc.)
+- **Mobile-Specific Enhancements** (Mobile-specific banners, collapsible content, tap-to-call buttons, etc.)
+- **Speed Optimization on Mobile** (Lazy loading, reduced DOM elements, optimized assets)
+- **Mobile SEO Optimization** (Improve mobile page experience score & Core Web Vitals support)
+- **Cross-Device Testing (Multiple Viewports)** (Tested on phones, tablets, and foldable devices)
+- **Custom Mobile Header/Footer if Needed** (Refactor for clarity and UX)
+- **30-Day Priority Support** (Bugs, issues, or changes included)
+- **Devices Tested On:** All major screen sizes (mobile, tablet, foldable, etc.)
+
+**Timeline:** 5-7 working days
+
+---
+
+## 5. Website Performance Optimization – Packages
+
+### 1. Starter Pack – "Speed Basics"
+**Best for:** Clients who want to address the most common issues slowing their site down.
+
+**Features Included:**
+- **Initial Performance Audit** (Google PageSpeed & GTmetrix Reports)
+- **Image Optimization** (Resize & compress images on homepage + 2 other pages)
+- **Browser Caching Setup** (Use of .htaccess or plugin-based solutions)
+- **GZIP Compression Setup** (Enables file compression for faster delivery)
+- **Minify CSS, JS & HTML Files** (Basic reduction of file sizes to speed up rendering)
+- **Lazy Loading for Images** (Load images only when visible on screen)
+- **Improvement Expected:** Load time reduced by 20-40% (depending on current setup)
+
+**Timeline:** 2-3 working days
+
+### 2. Growth Pack – "Enhanced Performance"
+**Best for:** Sites with more pages or interactive content that need smoother performance across the board.
+
+**Includes Everything in Starter Pack, PLUS:**
+- **Full-Site Image Optimization** (Across up to 15 pages)
+- **Advanced Caching Configuration** (Plugin or server-level setup – e.g., WP Rocket, Litespeed)
+- **Database Optimization** (Clean up revisions, transients, and unused data)
+- **Critical CSS & Defer JS Setup** (Prioritize visible content for faster first paint)
+- **Mobile Performance Tuning** (Targeted speed fixes for mobile devices)
+- **Testing & Reporting After Fixes** (Before/after results shared with you)
+- **Improvement Expected:** 40-70% faster load times
+
+**Timeline:** 3-5 working days
+
+### 3. Pro Pack – "Blazing Fast Web"
+**Best for:** Larger websites, e-commerce stores, or serious businesses that rely on performance for conversions, SEO, and UX.
+
+**Includes Everything in Growth Pack, PLUS:**
+- **Complete Site Optimization (Unlimited Pages)**
+- **Content Delivery Network (CDN) Integration** (e.g., Cloudflare setup & config)
+- **Server Performance Tuning (if accessible)** (Adjust PHP limits, HTTP/2, keep-alive, etc.)
+- **WebP Image Conversion** (Next-gen format for faster loading without quality loss)
+- **Real-Time User Monitoring Setup** (Track performance from real user locations)
+- **Core Web Vitals Optimization** (Target green scores on Google Lighthouse: LCP, FID, CLS)
+- **E-commerce Speed Boosting (if applicable)** (Optimize checkout, cart, and product page performance)
+- **30-Day Priority Support** (Includes follow-ups, fixes, or re-optimizations if needed)
+- **Improvement Expected:** 70-90% speed boost + improved Core Web Vitals
+
+**Timeline:** 5-7 working days
+
+---
+
+## 6. Analytics Setup & Reporting – Packages
+
+### 1. Starter Pack – "Essential Tracking"
+**Best for:** Businesses that need basic tracking of visitors and traffic sources.
+
+**Features Included:**
+- **Google Analytics (GA4) Setup** (Basic integration with website)
+- **Google Tag Manager (GTM) Setup (Optional)** (Tag-based installation)
+- **Traffic Overview Dashboard** (Page views, sessions, devices, and top pages)
+- **Event Tracking for Key Actions** (e.g., button clicks, form submissions – up to 3 events)
+- **Monthly Traffic Snapshot Report** (PDF format)
+
+**Timeline:** 2-3 working days
+
+### 2. Growth Pack – "Insightful Reporting"
+**Best for:** Teams that want more detailed insights into user actions and performance.
+
+**Includes Everything in Starter Pack, PLUS:**
+- **Advanced Event Tracking Setup** (Up to 10 key actions – clicks, scrolls, downloads, video views, etc.)
+- **Conversion Goal Setup** (Track actions like form submits, leads, purchases)
+- **Basic Funnel Setup** (Identify drop-offs in key user journeys – e.g., sign-up flow)
+- **UTM Campaign Tracking Setup** (Track effectiveness of external marketing links)
+- **Custom Google Looker Studio Dashboard** (Visual monthly report with key metrics)
+
+**Timeline:** 4-5 working days
+
+### 3. Pro Pack – "Data-Driven Excellence"
+**Best for:** Businesses that rely heavily on data to make product, marketing, and growth decisions.
+
+**Includes Everything in Growth Pack, PLUS:**
+- **E-commerce/Event Tracking Integration** (Track revenue, product performance, cart events, etc.)
+- **Audience Segmentation Setup** (Track user behavior based on device, traffic source, geography, etc.)
+- **Cross-Domain/Multiple Property Tracking** (If applicable across subdomains or microsites)
+- **Weekly Custom Reports** (Delivered in PDF or Google Data Studio – includes insights)
+- **Monthly Performance Review Call** (Discuss reports, ask questions, get strategy tips)
+- **A/B Test Tracking Setup (Optional)** (Integration support for platforms like Google Optimize or other)
+- **Real-Time Monitoring Dashboard** (Live metrics dashboard for decision-makers)
+
+**Timeline:** 5-7 working days
+
+---
+
+## 7. Online Booking System
+
+### 1. Starter Pack – "Quick Start Booking"
+**Best for:** Individuals or small businesses who need a simple, professional booking system.
+
+**Features Included:**
+- **Booking Calendar Setup:** Clean and responsive calendar embedded on your website or standalone link
+- **Basic Booking Form:** Collect essential details like name, email, service selection, and preferred date/time
+- **Booking Dashboard (Basic):** Access to view, edit, and manage appointments in a simple dashboard
+- **Email Notifications:** Automated confirmation emails to both customer and service provider
+- **One-Time Setup & Custom Branding:** Logo, color scheme, and basic customization
+
+**Timeline:** 2-3 days
+
+### 2. Growth Pack – "Smart Scheduling Suite"
+**Best for:** Growing businesses who want automation and improved customer experience.
+
+**Includes everything in the Starter Pack, PLUS:**
+- **Advanced Booking Form:** Add custom fields (e.g., service type, team member, notes)
+- **SMS Reminders:** Automated SMS notifications for upcoming appointments
+- **Multiple Time Slots & Staff Schedules:** Set up availability for multiple services/providers
+- **Google Calendar Integration:** Sync appointments with your Google Calendar
+- **Booking Dashboard (Advanced):** Filter bookings, export data, customer view
+- **Basic Payment Integration:** Accept payments via Stripe, Razorpay, or PayPal
+- **Cancellation & Rescheduling Options**
+
+**Timeline:** 4-6 days
+
+### 3. Pro Pack – "Full Booking Automation Pro"
+**Best for:** Established businesses needing full automation, analytics, and seamless integrations.
+
+**Includes everything in Growth Pack, PLUS:**
+- **Custom Payment Workflow:** Offer upfront payment, partial payment, or pay later options
+- **Advanced Reminders & Follow-ups:** Custom sequences (e.g., 24hr reminder + follow-up email after appointment)
+- **CRM Integration:** Connect to tools like HubSpot, Zoho, or custom CRM
+- **Analytics & Reports:** Track bookings, revenue, popular time slots, and customer insights
+- **Multi-location Support:** Ideal for chains or businesses with multiple branches
+- **Priority Support & Maintenance:** Direct access to expert support, monthly system checks
+
+**Timeline:** 7-10 days
+
+---
+
+## 8. Landing Page for Campaigns or Events – Packages
+
+### 1. Starter Pack – "Launch Lite"
+**Best for:** Individuals or small brands launching an event or promotion and need a fast, clean landing page.
+
+**Features Included:**
+- **One-Page Scroll Design:** Responsive landing page with a modern layout optimized for mobile and desktop
+- **Custom Branded Styling:** Logo, brand colors, fonts, and imagery incorporated
+- **Primary CTA Section:** Highlight your campaign goal – register now, sign up, or reserve a spot
+- **Basic Lead Capture Form:** Collect name, email, and phone number
+- **Basic Thank You Page/Message:** Confirmation after form submission
+- **One-time Setup (No Monthly Charges)**
+
+**Timeline:** 2-3 days
+
+### 2. Growth Pack – "Conversion Booster"
+**Best for:** Growing brands or businesses running recurring campaigns or launches who want better engagement and lead conversion.
+
+**Includes everything in the Starter Pack, PLUS:**
+- **Multiple CTA Sections:** Add multiple touchpoints throughout the page
+- **Visual Enhancements:** Animated transitions, banners, countdowns, or event timers
+- **Lead Capture Form (Advanced):** Custom fields, dropdowns, checkboxes, file upload, etc.
+- **CRM or Google Sheet Integration:** Auto-sync leads to your database
+- **Basic Analytics Tracking:** Track page views, form submissions (Google Analytics or Meta Pixel)
+- **Social Proof Elements:** Testimonials, trust badges, or partner logos
+
+**Timeline:** 4-5 days
+
+### 3. Pro Pack – "Conversion Command Center"
+**Best for:** High-impact product launches, large campaigns, or event-driven businesses looking for full funnel control and data insights.
+
+**Includes everything in the Growth Pack, PLUS:**
+- **A/B Testing Setup:** Test two versions of your landing page to optimize conversions
+- **Full Analytics Dashboard:** Custom dashboard showing live performance metrics (views, form fills, bounce rate)
+- **Custom Thank You Flow:** Thank you page + email/SMS confirmation to user
+- **Retargeting Pixel Setup:** Meta Pixel, Google Ads Pixel, LinkedIn Insight Tag, etc.
+- **WhatsApp/Chat Integration:** Allow real-time engagement from the landing page
+- **Priority Optimization:** Speed enhancements, SEO optimization, and 2-week performance review
+
+**Timeline:** 5-7 days
+
+---
+
+## 9. Email Newsletter System Setup – Packages
+
+### 1. Starter Pack – "Newsletter Kickoff"
+**Best for:** Beginners or small businesses wanting to start building a subscriber base and send basic newsletters.
+
+**Features Included:**
+- **Signup Form Setup:** Embed a simple, branded sign-up form on your website or as a standalone link
+- **Email Template Design (1 Template):** Mobile-friendly, professionally designed template for your newsletter or promotions
+- **Subscriber List Creation:** One mailing list to collect and manage subscribers
+- **Email Marketing Platform Integration:** Setup with tools like Mailchimp, ConvertKit, Brevo (formerly Sendinblue), etc.
+- **One Automated Welcome Email:** Send a warm welcome message to new subscribers
+
+**Timeline:** 2-3 days
+
+### 2. Growth Pack – "Engage & Grow"
+**Best for:** Businesses looking to actively engage subscribers with campaigns, build relationships, and increase sales.
+
+**Includes everything in the Starter Pack, PLUS:**
+- **Multiple Signup Forms:** Create forms for different website sections or lead magnets
+- **2-3 Email Templates:** For newsletters, offers, or updates
+- **Subscriber Segmentation:** Group your audience based on behavior or preferences
+- **Automated Email Sequences (Up to 3 Emails):** Send drip campaigns for onboarding, upsells, or nurture
+- **Performance Tracking Setup:** Track open rates, click-throughs, unsubscribes, etc.
+- **Custom Thank You Page or Redirects:** Post-signup experience optimization
+
+**Timeline:** 4-5 days
+
+### 3. Pro Pack – "Automated Email Engine"
+**Best for:** Businesses ready to scale and automate email marketing with deep segmentation, A/B testing, and CRM integration.
+
+**Includes everything in Growth Pack, PLUS:**
+- **Advanced Subscriber Management:** Tagging, custom fields, and dynamic lists based on user activity
+- **Up to 5 Custom Email Templates:** Branded, campaign-specific templates for various use cases
+- **Full Campaign Setup (Up to 2 Campaigns):** We'll set up and test full campaign flows
+- **Behavioral Triggers:** Emails based on actions like downloads, purchases, page visits
+- **CRM Integration:** Connect your mailing system with HubSpot, Zoho, or custom CRM tools
+- **A/B Testing Setup:** Optimize subject lines, content blocks, and CTAs
+- **Analytics Dashboard:** Visualize email campaign performance in one place
+
+**Timeline:** 6-8 days
+
+---
+
+## 10. Mobile App from Existing Website – Packages
+
+### 1. Starter Pack – "Web-to-App Lite"
+**Best for:** Brands or individuals who want a simple app version of their website without advanced features or store listings.
+
+**Features Included:**
+- **iOS & Android Wrapper App** (Your website opens in a mobile app shell, accessible like a native app)
+- **Branded App Icon** (Custom icon designed to match your brand)
+- **Custom Splash Screen** (Branded launch screen while the app loads)
+- **Offline Error Screen** (Friendly message when there's no internet)
+- **Basic Installation File (.apk / .ipa TestFlight)** (Ready to install manually or distribute via your network)
+
+**Timeline:** 3-4 days
+
+### 2. Growth Pack – "Engage App"
+**Best for:** Businesses that want users to install, engage, and interact with their site via app features.
+
+**Includes everything in the Starter Pack, PLUS:**
+- **Push Notification Integration (1 platform)** (Send basic updates/offers directly to user devices)
+- **Loading Progress Bar** (Enhances user experience during page load)
+- **External Link Handling** (Smooth transition for links outside your site)
+- **Back Button Handling** (Prevent unexpected app exits)
+- **Basic App Store & Play Store Support** (Guidance and files ready for manual upload to stores (you upload, we support))
+
+**Timeline:** 5-6 days
+
+### 3. Pro Pack – "Launch & Scale App"
+**Best for:** Businesses looking to launch a polished, installable mobile app on Google Play and the Apple App Store, with advanced user engagement features.
+
+**Includes everything in Growth Pack, PLUS:**
+- **Advanced Push Notifications** (Segment users and schedule notifications)
+- **App Store & Play Store Publishing** (We handle end-to-end publishing under your developer accounts)
+- **Custom Splash Screen Animation (Optional)** (Add subtle transitions for polish)
+- **In-App Browser Customizations** (Remove unwanted elements or headers)
+- **Version Update Handling** (Prompt users to update the app)
+- **Basic Analytics Setup** (Track user installs, active users, etc.)
+
+**Timeline:** 7-10 days
+
+---
+
+## 11. Digital Menu or Service Catalog Builder – Packages
+
+### 1. Starter Pack – "Digital View Only"
+**Best for:** Small businesses, cafés, salons, or solo entrepreneurs who want a clean, shareable digital catalog for viewing only.
+
+**Features Included:**
+- **Single-Page Digital Menu/Catalog** (Mobile-friendly, scrollable interface)
+- **Interactive Layout** (Click-to-expand sections for services or food categories)
+- **Editable Content via Google Sheet/Notion** (Non-tech-friendly updates)
+- **Branded Header & Color Theme** (Logo and primary color customizations)
+- **QR Code Generation** (Printable QR linking directly to the catalog)
+- **Format:** Web-hosted page (subdomain or shared link)
+- **Functionality:** View-only, no ordering or interaction
+
+**Timeline:** 2-3 working days
+
+### 2. Growth Pack – "Smart Interactive Catalog"
+**Best for:** Businesses ready to enhance the customer experience with richer content and tracking – like beauty studios, restaurants, clinics, or stores.
+
+**Includes everything in Starter Pack, PLUS:**
+- **Multi-Category & Tabbed Navigation** (Organize items by types or offerings)
+- **Image/Icon Support per Item** (Visually appealing catalog)
+- **Custom Domain Setup** (e.g., www.YourMenuName.com)
+- **Live Content Editor** (Airtable/CMS Edit content in real time without coding)
+- **Basic Analytics Integration** (Track catalog visits & engagement)
+- **Search & Filter Options** (Easier navigation for larger catalogs)
+- **Multiple QR Code Designs** (Branded, colored, logo-integrated)
+- **Functionality:** Interactive viewing with improved navigation, no ordering
+
+**Timeline:** 4-5 working days
+
+### 3. Pro Pack – "Order-Enabled Catalog"
+**Best for:** Restaurants, cloud kitchens, spas, service providers, or clinics looking to accept real-time orders or service requests directly from the catalog.
+
+**Includes everything in Growth Pack, PLUS:**
+- **Ordering Functionality** (Users can place orders or select services directly)
+- **Order Dashboard/Notifications** (Real-time notifications via WhatsApp/Email/Admin Panel)
+- **Payment Integration (Optional)** (Collect payments via Razorpay/UPI/Stripe/PayPal)
+- **Add-to-Cart & Checkout Flow** (Enable multi-item ordering with quantity selection)
+- **Service Scheduling (Optional)** (Allow users to choose a time slot)
+- **Admin Dashboard or Google Sheet Sync** (Track and manage orders easily)
+- **Print-Friendly or Invoice PDF Option** (Export receipts/orders)
+- **Multilingual Support (Optional)** (Serve regional or international customers)
+- **Functionality:** Full catalog + live ordering + fulfillment-ready
+
+**Timeline:** 6-8 working days
+
+---
+
+## 12. Online Course or Workshop Setup – Packages
+
+### 1. Starter Pack – "Launch Essentials"
+**Best for:** Educators, trainers, or creators launching their first course or workshop with limited content and simple needs.
+
+**Features Included:**
+- **Single Course Setup** (One course with up to 5 modules (lessons/videos/quizzes))
+- **Content Upload Support** (We'll help you upload all your course videos, PDFs, and other materials)
+- **Basic Course Landing Page** (Clean design with your logo, course info, instructor bio, and a single call-to-action)
+- **Basic Payment Integration** (Accept payments via Razorpay, Stripe, or Instamojo 1-time payment setup)
+- **Manual Student Access Setup** (After payment, users are added manually or via a basic confirmation flow)
+
+**Timeline:** 3-4 days
+
+### 2. Growth Pack – "Sell & Track"
+**Best for:** Creators ready to scale with multiple courses, automated access, and basic student progress tracking.
+
+**Includes everything in Starter Pack, PLUS:**
+- **Multiple Course Support** (Up to 3 course setups with modular structure)
+- **Automated Student Enrollment** (Students get immediate access after successful payment)
+- **Progress Tracking Setup** (Track lesson completions per student)
+- **Coupon Code Setup** (Offer discounts to your audience)
+- **Course Purchase Dashboard** (See how many users enrolled in which course)
+- **Email Notification Setup** (Automated email on enrollment, course access, etc.)
+
+**Timeline:** 5-7 days
+
+### 3. Pro Pack – "Full Learning Suite"
+**Best for:** Coaches, training academies, or professionals ready to run a fully functional and branded online course business.
+
+**Includes everything in Growth Pack, PLUS:**
+- **Unlimited Courses & Modules** (No cap on number of courses or students)
+- **Branded Student Dashboard** (Clean UI showing enrolled courses, progress, certificates, and course recommendations)
+- **Tiered Course Pricing** (Set multiple pricing options (one
