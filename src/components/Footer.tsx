@@ -65,12 +65,54 @@ const Footer = () => {
               <div className="flex flex-col items-start">
                 <h3 className="text-lg font-semibold mb-4 text-white">Our Services</h3>
                 <ul className="space-y-2 text-sm">
-                  <li>Custom Software Development</li>
-                  <li>SaaS & PaaS Development</li>
-                  <li>Enterprise Software Solutions</li>
-                  <li>Software Maintenance & Support</li>
-                  <li>Consulting & Digital Transformation</li>
-                  <li>UX/UI Design Services</li>
+                  <li>
+                    <Link 
+                      to="/services" 
+                      state={{ tab: "custom-dev" }}
+                    >
+                      Custom Software Development
+                    </Link>
+                  </li>
+                  <li>
+                    <Link 
+                      to="/services" 
+                      state={{ tab: "saas-paas" }}
+                    >
+                      SaaS & PaaS Development
+                    </Link>
+                  </li>
+                  <li>
+                    <Link 
+                      to="/services" 
+                      state={{ tab: "enterprise" }}
+                    >
+                      Enterprise Software Solutions
+                    </Link>
+                  </li>
+                  <li>
+                    <Link 
+                      to="/services" 
+                      state={{ tab: "maintenance" }}
+                    >
+                      Software Maintenance & Support
+                    </Link>
+                  </li>
+                  <li>
+                    <Link 
+                      to="/services" 
+                      state={{ tab: "consulting" }}
+                    >
+                      Consulting & Digital Transformation
+                    </Link>
+                  </li>
+                  <li>
+                    <Link 
+                      to="/services" 
+                      state={{ tab: "ux-design" }}
+                    >
+                      UX/UI Design Services
+                    </Link>
+                  </li>
                 </ul>
               </div>
 

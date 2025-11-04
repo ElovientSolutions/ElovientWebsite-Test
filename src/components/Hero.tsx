@@ -160,7 +160,7 @@ const Hero = () => {
           </motion.p>
           
           <motion.div 
-            className="mt-5 max-w-md mx-auto flex justify-center gap-4 md:mt-8"
+            className="mt-5 max-w-md mx-auto flex flex-col items-center gap-4 md:flex-row md:justify-center md:gap-4 md:mt-8"
             variants={itemVariants}
           >
             <Button asChild className="inline-flex items-center hover:scale-105 transition-transform">
@@ -169,10 +169,11 @@ const Hero = () => {
                 <ArrowRight className="ml-2 h-4 w-4" />
               </Link>
             </Button>
+
             <Button
               variant="outline"
               asChild
-              className="bg-[#f2f6fa] hover:scale-105 transition-transform hover:bg-[#f2f6fa] hover:text-inherit"
+              className="bg-[#f2f6fa] hover:scale-105 transition-transform hover:bg-[#f2f6fa] hover:text-inherit outline-purple-500 outline outline-2"
             >
               <Link to="/contact">Contact Us</Link>
             </Button>
