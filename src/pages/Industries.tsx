@@ -12,6 +12,8 @@ import {
   Layout,
   Banknote,
 } from "lucide-react";
+import { useSearchParams } from "react-router-dom";
+import { useState } from "react";
 
 const Industries = () => {
   const industriesData = [
@@ -120,6 +122,18 @@ const Industries = () => {
     },
   ];
 
+  const [searchParams, setSearchParams] = useSearchParams(); 
+  const validTabIds = industriesData.map(ind => ind.id);
+  const tabFromUrl = searchParams.get("tab");
+  const defaultTab = validTabIds.includes(tabFromUrl) 
+    ? tabFromUrl 
+    : "enterprise";
+  const [activeTab, setActiveTab] = useState(defaultTab);
+  const handleTabChange = (value) => {
+    setActiveTab(value);
+    setSearchParams({ tab: value }); 
+  };
+
   return (
     <div className="min-h-screen bg-white">
       <Seo
@@ -142,7 +156,7 @@ const Industries = () => {
           </p>
         </div>
 
-        <Tabs defaultValue="enterprise" className="w-full">
+        <Tabs value={activeTab} className="w-full" onValueChange={handleTabChange}>
           <TabsList className="grid grid-cols-2 md:grid-cols-4 gap-2 mb-10 w-full">
             {industriesData.map((industry) => (
               <TabsTrigger

@@ -293,15 +293,18 @@ const Index = () => {
           </div>
 
           <div className="flex flex-wrap justify-center gap-4">
-            {industries.map((industry, index) => (
+            {industries.map((industry, index) => {
+            const tabValue = industry.split(' ')[0].toLowerCase();
+            return (
               <Link
                 key={index}
-                to="/industries"
+                to={`/industries?tab=${tabValue}`}
                 className="px-6 py-3 bg-white shadow-sm rounded-full text-gray-700 hover:text-primary hover:shadow transition-all"
               >
                 {industry}
               </Link>
-            ))}
+            );
+          })}
           </div>
 
           <div className="text-center mt-12">
