@@ -173,7 +173,7 @@ const Hero = () => {
             <Button
               variant="outline"
               asChild
-              className="bg-[#f2f6fa] hover:scale-105 transition-transform hover:bg-[#f2f6fa] hover:text-inherit outline-purple-500 outline outline-2"
+              className="hover:scale-105 transition-transform"
             >
               <Link to="/contact">Contact Us</Link>
             </Button>

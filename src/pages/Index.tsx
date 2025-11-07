@@ -22,6 +22,7 @@ import {
   CarouselNext,
 } from "@/components/ui/carousel";
 import Seo from "@/components/Seo";
+import agenticai_img from "../assets/images/AI_image.png"
 
 const Index = () => {
   const features = [
@@ -29,37 +30,37 @@ const Index = () => {
       icon: Code,
       title: "Expert-Led Digital Transformation",
       description:
-        "We modernize legacy systems and implement cloud, AI, IoT, and automation solutions–driven by clear business goals and built for long-term impact.",
+        "We modernize legacy systems and implement cloud, AI, IoT and automation solutions–driven by clear business goals and built for long-term impact.",
     },
     {
       icon: Rocket,
       title: "Enterprise System Integration",
       description:
-        "We connect legacy systems, SaaS platforms, APIs, and custom applications into a unified ecosystem–enabling seamless data flow, process automation, and real-time visibility across the business.",
+        "We connect legacy systems, SaaS platforms, APIs and custom applications into a unified ecosystem–enabling seamless data flow, process automation and real-time visibility across the business.",
     },
     {
       icon: Shield,
       title: "Custom Software Development",
       description:
-        "We design, build, and deploy tailored software solutions – spanning web, mobile, and enterprise platforms – built to fit your specific workflows, user needs, and long-term goals.",
+        "We design, build and deploy tailored software solutions: spanning web, mobile and enterprise platforms, built to fit your specific workflows, user needs and long-term goals.",
     },
     {
       icon: Users,
       title: "Scalable, Agile Delivery",
       description:
-        "Our agile delivery model and on-demand tech teams enable faster execution, cost efficiency, and the ability to scale solutions as your business evolves.",
+        "Our agile delivery model and on-demand tech teams enable faster execution, cost efficiency and the ability to scale solutions as your business evolves.",
     },
     {
       icon: ChartBar,
       title: "Intelligent Data & AI Solutions",
       description:
-        "We turn raw data into actionable insights using analytics, automation, and AI–enabling AI-powered decisions, predictive capabilities, and process optimization.",
+        "We turn raw data into actionable insights using analytics, automation and AI–enabling AI-powered decisions, predictive capabilities and process optimization.",
     },
     {
       icon: Award,
       title: "Trusted, Independent Technology Partnership",
       description:
-        "We stay invested beyond delivery–offering long-term support, unbiased technology advisory, and scalable solutions aligned with your evolving business goals.",
+        "We stay invested beyond delivery–offering long-term support, unbiased technology advisory and scalable solutions aligned with your evolving business goals.",
     },
   ];
 
@@ -67,9 +68,9 @@ const Index = () => {
     {
       title: "Custom Software Development",
       description:
-        "We build robust, high-performance software applications across web, mobile, and enterprise environments–tailored to your operational workflows and business goals.",
+        "We build robust, high-performance software applications across web, mobile and enterprise environments completely tailored to your operational workflows and business goals.",
       items: [
-        "Web & Mobile Apps (iOS, Android, Hybrid)",
+        "Web & Mobile Apps (iOS android, Hybrid)",
         "AI & IoT Solutions",
         "Cloud-Based Applications",
         "API Development",
@@ -78,7 +79,7 @@ const Index = () => {
     {
       title: "SaaS & PaaS Development",
       description:
-        "We build secure, scalable SaaS and PaaS platforms that streamline operations, enable multi-user access, and support flexible monetization models.",
+        "We build secure, scalable SaaS and PaaS platforms that streamline operations, enable multi-user access and support flexible monetization models.",
       items: [
         "SaaS Applications",
         "PaaS Solutions",
@@ -89,7 +90,7 @@ const Index = () => {
     {
       title: "Enterprise Application Modernization",
       description:
-        "We help businesses modernize and optimize their legacy systems – migrating to modern architectures, upgrading tech stacks, and streamlining operations.",
+        "We help businesses modernize and optimize their legacy systems migrating to modern architectures, upgrading tech stacks and streamlining operations.",
       items: [
         "Legacy System Reengineering",
         "Architecture Modernization",
@@ -114,7 +115,7 @@ const Index = () => {
     },
     {
       quote:
-        "We partnered with Elovient for our e-learning and proctoring platform. Their team was professional, fast, and highly detail-oriented. The AI integration was a game-changer.",
+        "We partnered with Elovient for our e-learning and proctoring platform. Their team was professional, fast and highly detail-oriented. The AI integration was a game-changer.",
       author: "Founder",
       position: "EdTech Startup, Bengaluru, India",
     },
@@ -202,7 +203,7 @@ const Index = () => {
             <p className="mt-4 text-xl text-gray-500 max-w-4xl mx-auto">
               We deliver custom-built platforms, enterprise system integrations,
               and AI-driven solutions designed to accelerate growth, streamline
-              operations, and future-proof your business.
+              operations and future-proof your business.
             </p>
           </div>
 
@@ -268,10 +269,97 @@ const Index = () => {
             ))}
           </div>
 
-          <div className="text-center mt-12">
+          <div className="text-center mt-6 mb-20 sm:mb-0">
             <Button asChild className="px-6">
               <Link to="/services">View All Services</Link>
             </Button>
+          </div>
+        </div>
+      </section>
+
+      {/* AI First Solutions Section */}
+      <section className="relative py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-6xl mx-auto">
+          <div className="relative bg-[#f6f3ff] rounded-3xl p-8 sm:p-12 mb-8 overflow-visible">
+            
+            <div
+              className="absolute left-6 -top-[170px] sm:hidden transform transition-all duration-500 hover:scale-105 hover:-translate-y-2"
+            >
+              <div className="rounded-3xl overflow-hidden border-4 border-white hover:shadow-purple-400/50 transition-all duration-500">
+                <img
+                  src={agenticai_img}
+                  alt="AI Agentic Intelligence Visualization"
+                  className="aspect-[3.2/4] w-full max-w-[180px] object-fill"
+                />
+              </div>
+            </div>
+
+            <div className="pt-16 sm:pt-0">
+              <h2 className="text-[26px] font-bold text-gray-900 sm:text-4xl mb-6">
+                AI First Solutions - Enriched with Agentic AI
+              </h2>
+
+              <p className="text-gray-600 mb-4 leading-relaxed max-w-5xl">
+                We architect secure, compliant, enterprise grade systems that automate decisions, orchestrate workflows and scale reliably. From opportunity discovery to delivery, our teams align data foundations, model governance and change adoption to accelerate ROI in weeks, not months. See how AI delivers outcomes across your value chain.
+              </p>
+
+              <div className="mt-4 sm:hidden border-t border-gray-200 pt-2">
+                <p className="mb-8 text-lg text-gray-800 italic leading-relaxed text-left">
+                  "Agentic AI will autonomously resolve 80% of common customer service issues without human intervention by 2029."
+                  <span className="font-semibold text-gray-900 not-italic"> - Gartner</span>
+                </p>
+              </div>
+            </div>
+
+             <Button
+              asChild
+              size="lg"
+              className="
+                mt-4 sm:mt-0 mb-4 sm:mb-0
+                w-full sm:w-auto
+                hover:from-purple-700 hover:to-purple-600
+                text-white 
+                px-6 sm:px-8 lg:px-10
+                py-4 sm:py-5 lg:py-6
+                text-base sm:text-lg lg:text-xl
+                rounded-full 
+                shadow-md hover:shadow-lg
+                transition-all duration-300 ease-in-out
+                whitespace-normal break-words text-center
+              "
+            >
+              <Link to="/contact">
+              <span className="hidden xs:inline sm:inline">Contact Us for AI Solutions</span>
+              <span className="inline xs:hidden sm:hidden">Contact Us</span>
+              </Link>
+            </Button>
+
+            <div
+              className="absolute right-10 -bottom-24 transform transition-all duration-500 hover:scale-105 hover:-translate-y-2 hidden sm:block"
+              style={{ bottom: '-150px' }}
+            >
+              <div className="rounded-3xl overflow-hidden shadow-2xl border-4 border-white hover:shadow-purple-400/50 transition-all duration-500">
+                <img
+                  src={agenticai_img}
+                  alt="AI Agentic Intelligence Visualization"
+                  className="aspect-[3.2/4] w-full 
+                  max-w-[150px] 
+                  sm:max-w-[180px] 
+                  md:max-w-[190px] 
+                  lg:max-w-[200px] 
+                  xl:max-w-[210px] object-fill"
+                />
+              </div>
+            </div>
+          </div>
+
+          <div className="hidden sm:grid grid-cols-1 sm:grid-cols-2 gap-8 items-center mt-12">
+            <div className="flex items-center justify-center sm:justify-start">
+              <p className="text-xl text-gray-800 italic leading-relaxed text-center sm:text-left">
+                "Agentic AI will autonomously resolve 80% of common customer service issues without human intervention by 2029."
+                <span className="font-semibold text-gray-900 not-italic"> - Gartner</span>
+              </p>
+            </div>
           </div>
         </div>
       </section>
@@ -285,7 +373,7 @@ const Index = () => {
             </h2>
             <p className="mt-4 text-xl text-gray-500 max-w-4xl mx-auto">
               We partner with businesses across industries to design custom
-              software, integrate complex systems, and drive digital
+              software, integrate complex systems and drive digital
               transformation. From internal efficiency to customer-facing
               innovation, our solutions are tailored to solve core operational
               and technology challenges unique to each sector.
@@ -307,8 +395,8 @@ const Index = () => {
           })}
           </div>
 
-          <div className="text-center mt-12">
-            <Button asChild variant="outline" className="px-6">
+          <div className="text-center mt-12 ">
+            <Button asChild variant="outline" className="px-6 outline-purple-500 outline outline-2">
               <Link to="/industries">Explore Industries</Link>
             </Button>
           </div>
