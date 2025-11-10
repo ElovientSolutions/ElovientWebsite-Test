@@ -14,6 +14,7 @@ import {
   Send,
   MessageSquare,
   Loader,
+  Upload
 } from "lucide-react";
 import { useState } from "react";
 import { toast } from "@/components/ui/use-toast";
@@ -22,190 +23,220 @@ import axios from "axios";
 import GoogleAnalyticsTags from "../helper/googleAnalytics"
 
 const Contact = () => {
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    phone: "",
-    company: "",
-    message: "",
-  });
-
-  const [formErrors, setFormErrors] = useState({
-    name: "",
-    email: "",
-    phone: "",
-    company: "",
-    message: "",
-  });
-
-  const { trackFormSubmit } = GoogleAnalyticsTags()
-
-  const [loading, setLoading] = useState(false);
-
-  const handleChange = (
-    e: any
-  ) => {
-    const { name, value } = e.target;
-
-    if (name === "phone") {
-      // Allow only digits and a single optional leading '+'
-      const sanitizedValue = value
-        .replace(/[^\d+]/g, "") // Remove all except digits and '+'
-        .replace(/(?!^)\+/g, ""); // Remove '+' if not at the start
-
-      setFormData((prev) => ({ ...prev, [name]: sanitizedValue }));
-    } else {
-      setFormData((prev) => ({ ...prev, [name]: value }));
-    }
-  };
-
-  const handleExcelSheetEntry = (templateParams: any) => {
-    const formBody = Object.entries(templateParams)
-      .map(([key, value]: any) => encodeURIComponent(key) + '=' + encodeURIComponent(value))
-      .join('&');
-
-    fetch("https://script.google.com/macros/s/AKfycbw0D_LXpYxUUUSKl9pl9h_rxmT36RWdQLiJyZsUzWcjYQHH5tuVh8-180av_b2PmEGEQw/exec", {
-      method: "POST",
-      body: formBody,
-      headers: {
-        "Content-Type": "application/x-www-form-urlencoded",
-      },
-    });
-  }
-
-
-
-  //https://script.google.com/a/macros/elovient.com/s/AKfycby6R6KYTFIX84835dgq5RIgS8FiyvzDlbwyzXuSOFwtay11B0-a0LLz_OTveJnxFxn1GA/exec
-
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-
-    const errors = { name: "", email: "", phone: "", company: "", message: "" };
-
-    // Validate fields
-    if (!formData.name) errors.name = "Full name is required.";
-    if (!formData.email) {
-      errors.email = "Email is required.";
-    } else if (
-      !/^[\w-]+(\.[\w-]+)*@([\w-]+\.)+[a-zA-Z]{2,7}$/.test(formData.email)
-    ) {
-      // Basic email validation regex
-      errors.email = "Please enter a valid email address.";
-    }
-    if (!formData.phone || !/^\+?\d{7,15}$/.test(formData.phone)) {
-      errors.phone = "Please enter a valid phone number.";
-    }
-    // Company field is optional, no validation needed
-    if (!formData.message) errors.message = "Message is required.";
-
-    // If there are errors, update formErrors state and don't submit the form
-    if (Object.values(errors).some((error) => error)) {
-      setFormErrors(errors);
-      return;
-    }
-
-    // Clear any previous errors if validation passes
-    setFormErrors({
+    const [formData, setFormData] = useState({
       name: "",
       email: "",
       phone: "",
       company: "",
+      role: "",
+      enquiryType: "",
       message: "",
+      fileUpload: null as File | null,
     });
 
-    setLoading(true);
+    const [formErrors, setFormErrors] = useState({
+      name: "",
+      email: "",
+      phone: "",
+      company: "",
+      role: "",
+      enquiryType: "",
+      message: "",
+      fileUpload: "",
+    });
 
+    const { trackFormSubmit } = GoogleAnalyticsTags()
 
-    let phone = formatPhoneNumberIntl(formData.phone);
-    phone = phone.replace("+", "");
-    phone = phone.replace(" ", "-")
-    phone = phone.replace(/ /g, "");
+    const [loading, setLoading] = useState(false);
 
+    const handleChange = (
+      e: any
+    ) => {
+      const { name, value, files } = e.target;
 
-    const templateParams = {
-      name: formData.name,
-      email: formData.email,
-      phone: phone,
-      company: formData.company,
-      message: formData.message,
+      if (name === "fileUpload" && files) {
+        const file = files[0];
+        // Validate file size (10MB = 10 * 1024 * 1024 bytes)
+        if (file && file.size > 10 * 1024 * 1024) {
+          setFormErrors((prev) => ({ ...prev, fileUpload: "File size must be less than 10MB" }));
+          return;
+        }
+        // Validate file type
+        const allowedTypes = ['application/pdf', 'application/msword', 'application/vnd.openxmlformats-officedocument.wordprocessingml.document'];
+        if (file && !allowedTypes.includes(file.type)) {
+          setFormErrors((prev) => ({ ...prev, fileUpload: "Only PDF and DOCX files are allowed" }));
+          return;
+        }
+        setFormData((prev) => ({ ...prev, [name]: file }));
+        setFormErrors((prev) => ({ ...prev, fileUpload: "" }));
+      } else if (name === "phone") {
+        // Allow only digits and a single optional leading '+'
+        const sanitizedValue = value
+          .replace(/[^\d+]/g, "") // Remove all except digits and '+'
+          .replace(/(?!^)\+/g, ""); // Remove '+' if not at the start
+
+        setFormData((prev) => ({ ...prev, [name]: sanitizedValue }));
+      } else {
+        setFormData((prev) => ({ ...prev, [name]: value }));
+      }
     };
 
-    try {
-      const response = await axios.post(
-        "https://api.elovient.com/s1/contact-us",
-        templateParams
-      );
-      console.log(response);
+    const handleExcelSheetEntry = (templateParams: any) => {
+      const formBody = Object.entries(templateParams)
+        .map(([key, value]: any) => encodeURIComponent(key) + '=' + encodeURIComponent(value))
+        .join('&');
 
-      if (response.status === 200) {
-        toast({
+      fetch("https://script.google.com/macros/s/AKfycbw0D_LXpYxUUUSKl9pl9h_rxmT36RWdQLiJyZsUzWcjYQHH5tuVh8-180av_b2PmEGEQw/exec", {
+        method: "POST",
+        body: formBody,
+        headers: {
+          "Content-Type": "application/x-www-form-urlencoded",
+        },
+      });
+    }
 
-          description: (
-            <div className="flex flex-col">
-              <div className="flex items-center gap-2 mb-1">
-                <svg className="h-5 w-5 text-green-600 flex-shrink-0" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" /></svg>
-                <span className="text-green-700 text-base font-bold">Thank you for reaching out to Elovient Software Solutions.</span>
+    const handleSubmit = async (e: React.FormEvent) => {
+      e.preventDefault();
+
+      const errors = { 
+        name: "", 
+        email: "", 
+        phone: "", 
+        company: "", 
+        role: "",
+        enquiryType: "",
+        message: "",
+        fileUpload: "",
+      };
+
+      // Validate fields
+      if (!formData.name) errors.name = "Full name is required.";
+      if (!formData.email) {
+        errors.email = "Email is required.";
+      } else if (
+        !/^[\w-]+(\.[\w-]+)*@([\w-]+\.)+[a-zA-Z]{2,7}$/.test(formData.email)
+      ) {
+        errors.email = "Please enter a valid email address.";
+      }
+      if (!formData.phone || !/^\+?\d{7,15}$/.test(formData.phone)) {
+        errors.phone = "Please enter a valid phone number.";
+      }
+      if (!formData.enquiryType) errors.enquiryType = "Please select an enquiry type.";
+      if (!formData.message) errors.message = "Message is required.";
+
+      // If there are errors, update formErrors state and don't submit the form
+      if (Object.values(errors).some((error) => error)) {
+        setFormErrors(errors);
+        return;
+      }
+
+      // Clear any previous errors if validation passes
+      setFormErrors({
+        name: "",
+        email: "",
+        phone: "",
+        company: "",
+        role: "",
+        enquiryType: "",
+        message: "",
+        fileUpload: "",
+      });
+
+      setLoading(true);
+
+      let phone = formatPhoneNumberIntl(formData.phone);
+      phone = phone.replace("+", "");
+      phone = phone.replace(" ", "-")
+      phone = phone.replace(/ /g, "");
+
+      const templateParams = {
+        name: formData.name,
+        email: formData.email,
+        phone: phone,
+        company: formData.company,
+        role: formData.role,
+        enquiryType: formData.enquiryType,
+        message: formData.message,
+      };
+
+      try {
+        const response = await axios.post(
+          "https://api.elovient.com/s1/contact-us",
+          templateParams
+        );
+        console.log(response);
+
+        if (response.status === 200) {
+          toast({
+            description: (
+              <div className="flex flex-col">
+                <div className="flex items-center gap-2 mb-1">
+                  <svg className="h-5 w-5 text-green-600 flex-shrink-0" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" /></svg>
+                  <span className="text-green-700 text-base font-bold">Thank you for reaching out to Elovient Software Solutions.</span>
+                </div>
+                <span className="text-green-800">
+                  <span className="font-semibold">We've received your inquiry and will get back to you within 24 working hours.</span><br />
+                  Our team looks forward to connecting with you soon.
+                </span>
               </div>
-              <span className="text-green-800">
-                <span className="font-semibold">We’ve received your inquiry and will get back to you within 24 working hours.</span><br />
-                Our team looks forward to connecting with you soon.
-              </span>
-            </div>
-          ),
-          className: "border-green-400 bg-green-50 text-green-900 shadow-lg",
-          variant: "default",
-        });
-        // Reset form after successful submission
-        setFormData({
-          name: "",
-          email: "",
-          phone: "",
-          company: "",
-          message: "",
-        });
-      } else {
+            ),
+            className: "border-green-400 bg-green-50 text-green-900 shadow-lg",
+            variant: "default",
+          });
+          // Reset form after successful submission
+          setFormData({
+            name: "",
+            email: "",
+            phone: "",
+            company: "",
+            role: "",
+            enquiryType: "",
+            message: "",
+            fileUpload: null,
+          });
+        } else {
+          toast({
+            title: "Error",
+            description:
+              "There was an issue with sending your message. Please try again later.",
+            variant: "destructive",
+          });
+        }
+      } catch (error) {
+        console.error(error);
         toast({
           title: "Error",
           description:
             "There was an issue with sending your message. Please try again later.",
           variant: "destructive",
         });
+      } finally {
+        setLoading(false);
       }
-    } catch (error) {
-      console.error(error);
-      toast({
-        title: "Error",
-        description:
-          "There was an issue with sending your message. Please try again later.",
-        variant: "destructive",
-      });
-    } finally {
-      setLoading(false);
-    }
-    trackFormSubmit()
-    handleExcelSheetEntry(templateParams)
-  };
+      trackFormSubmit()
+      handleExcelSheetEntry(templateParams)
+    };
 
-  const contactInfo = [
-    {
-      icon: Mail,
-      title: "Email",
-      details: "connect@elovient.com",
-      link: "mailto:connect@elovient.com"
-    },
-    {
-      icon: Phone,
-      title: "Mobile",
-      details: "+91 98929 25936",
-      link: "tel:+919892925936"
-    },
-    {
-      icon: MapPin,
-      title: "Location",
-      details: "21st Floor, Commerz II, Oberoi Garden City, International Business Park, Goregaon, Mumbai, Maharashtra 400063, India",
-      link: "https://maps.app.goo.gl/Ky9t3YN76XpLuaAS9"
-    }
-  ];
+    const contactInfo = [
+      {
+        icon: Mail,
+        title: "Email",
+        details: "connect@elovient.com",
+        link: "mailto:connect@elovient.com"
+      },
+      {
+        icon: Phone,
+        title: "Mobile",
+        details: "+91 98929 25936",
+        link: "tel:+919892925936"
+      },
+      {
+        icon: MapPin,
+        title: "Location",
+        details: "21st Floor, Commerz II, Oberoi Garden City, International Business Park, Goregaon, Mumbai, Maharashtra 400063, India",
+        link: "https://maps.app.goo.gl/Ky9t3YN76XpLuaAS9"
+      }
+    ];
 
   return (
     <div className="min-h-screen bg-white">
@@ -251,50 +282,65 @@ const Contact = () => {
                     placeholder="Enter your full name"
                     value={formData.name}
                     onChange={handleChange}
-                  // required
                   />
                   {formErrors.name && (
                     <p className="text-red-500 text-sm">{formErrors.name}</p>
                   )}
                 </div>
+
                 <div className="space-y-2">
                   <Label htmlFor="email">Email Address</Label>
                   <Input
                     id="email"
                     name="email"
-                    // type="email"
                     placeholder="Enter your email address"
                     value={formData.email}
                     onChange={handleChange}
-                  // required
                   />
                   {formErrors.email && (
                     <p className="text-red-500 text-sm">{formErrors.email}</p>
                   )}
                 </div>
+
                 <div className="space-y-2">
                   <Label htmlFor="phone">Mobile Number</Label>
                   <PhoneInput
                     international
                     defaultCountry="IN"
-                    className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-base ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 md:text-sm"
+                    className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-base ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 md:text-sm"
                     value={formData.phone}
                     onChange={(v) => handleChange({ target: { name: 'phone', value: v || '' } })}
                   />
-
-                  {/* <Input  
-                    id="phone"
-                    name="phone"
-                    placeholder="Enter your mobile number"
-                    value={formData.phone}
-                    onChange={handleChange}
-                    inputMode="tel"
-                    required
-                  /> */}
                   {formErrors.phone && (
                     <p className="text-red-500 text-sm">{formErrors.phone}</p>
                   )}
                 </div>
+
+                <div className="space-y-2">
+                  <Label htmlFor="enquiryType" className="font-semibold">
+                    Enquiry Type <span className="text-red-500">*</span>
+                  </Label>
+                  <select
+                    id="enquiryType"
+                    name="enquiryType"
+                    className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-base ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 md:text-sm"
+                    value={formData.enquiryType}
+                    onChange={handleChange}
+                  >
+                    <option value="">Select</option>
+                    <option value="custom-software">Custom Software Development</option>
+                    <option value="saas-paas">SaaS & PaaS Development</option>
+                    <option value="enterprise-modernization">Enterprise Application Modernization</option>
+                    <option value="ai-solutions">AI & Data Solutions</option>
+                    <option value="system-integration">System Integration</option>
+                    <option value="consulting">Technology Consulting</option>
+                    <option value="other">Other</option>
+                  </select>
+                  {formErrors.enquiryType && (
+                    <p className="text-red-500 text-sm">{formErrors.enquiryType}</p>
+                  )}
+                </div>
+
                 <div className="space-y-2">
                   <Label htmlFor="company">Company (Optional)</Label>
                   <Input
@@ -303,13 +349,30 @@ const Contact = () => {
                     placeholder="Enter your company name"
                     value={formData.company}
                     onChange={handleChange}
-                  // required
                   />
                   {formErrors.company && (
                     <p className="text-red-500 text-sm">{formErrors.company}</p>
                   )}
                 </div>
+
+                {/* 🆕 Role/Designation moved here */}
+                <div className="space-y-2">
+                  <Label htmlFor="role" className="font-semibold">
+                    Role/Designation (Optional)
+                  </Label>
+                  <Input
+                    id="role"
+                    name="role"
+                    placeholder="Enter your role or designation"
+                    value={formData.role}
+                    onChange={handleChange}
+                  />
+                  {formErrors.role && (
+                    <p className="text-red-500 text-sm">{formErrors.role}</p>
+                  )}
+                </div>
               </div>
+
 
               <div className="space-y-2">
                 <Label htmlFor="message">Your Message</Label>
@@ -327,10 +390,37 @@ const Contact = () => {
                 )}
               </div>
 
-
               <p className="text-xs text-gray-500 text-left font-regular">
                 Your details will be used solely to respond to your query and will not be shared with third parties.
               </p>
+
+              <div className="space-y-2">
+                <Label className="font-semibold">
+                  Please share any relevant documents to help us understand your query better
+                </Label>
+                <div className="border-2 border-dashed border-purple-300 rounded-lg p-8 text-center bg-purple-50/30 hover:bg-purple-50/50 transition-colors cursor-pointer">
+                  <input
+                    type="file"
+                    id="fileUpload"
+                    name="fileUpload"
+                    className="hidden"
+                    accept=".pdf,.doc,.docx"
+                    onChange={handleChange}
+                  />
+                  <label htmlFor="fileUpload" className="cursor-pointer flex flex-col items-center">
+                    <div className="bg-purple-100 rounded-lg p-3 mb-3">
+                      <Upload className="h-8 w-8 text-primary" />
+                    </div>
+                    <p className="text-gray-700 font-medium mb-1">
+                      {formData.fileUpload ? formData.fileUpload.name : "Click to upload or drag & drop your file"}
+                    </p>
+                    <p className="text-sm text-gray-500">Max 10 MB permitted, supported file extensions are (PDF and Docx)</p>
+                  </label>
+                </div>
+                {formErrors.fileUpload && (
+                  <p className="text-red-500 text-sm">{formErrors.fileUpload}</p>
+                )}
+              </div>
               <Button
                 type="submit"
                 className="w-full flex items-center justify-center gap-2"

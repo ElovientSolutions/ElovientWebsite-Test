@@ -30,13 +30,13 @@ const Index = () => {
       icon: Code,
       title: "Expert-Led Digital Transformation",
       description:
-        "We modernize legacy systems and implement cloud, AI, IoT and automation solutions–driven by clear business goals and built for long-term impact.",
+        "We modernize legacy systems and implement cloud, AI, IoT and automation solutions, driven by clear business goals and built for long-term impact.",
     },
     {
       icon: Rocket,
       title: "Enterprise System Integration",
       description:
-        "We connect legacy systems, SaaS platforms, APIs and custom applications into a unified ecosystem–enabling seamless data flow, process automation and real-time visibility across the business.",
+        "We connect legacy systems, SaaS platforms, APIs and custom applications into a unified ecosystem, enabling seamless data flow, process automation and real-time visibility across the business.",
     },
     {
       icon: Shield,
@@ -54,13 +54,13 @@ const Index = () => {
       icon: ChartBar,
       title: "Intelligent Data & AI Solutions",
       description:
-        "We turn raw data into actionable insights using analytics, automation and AI–enabling AI-powered decisions, predictive capabilities and process optimization.",
+        "We turn raw data into actionable insights using analytics, automation and AI, enabling AI-powered decisions, predictive capabilities and process optimization.",
     },
     {
       icon: Award,
       title: "Trusted, Independent Technology Partnership",
       description:
-        "We stay invested beyond delivery–offering long-term support, unbiased technology advisory and scalable solutions aligned with your evolving business goals.",
+        "We stay invested beyond delivery. Offering long-term support, unbiased technology advisory and scalable solutions aligned with your evolving business goals.",
     },
   ];
 
