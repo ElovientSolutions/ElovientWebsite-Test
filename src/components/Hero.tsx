@@ -139,7 +139,7 @@ const Hero = () => {
           variants={containerVariants}
         >
           <motion.h1 
-            className="text-4xl tracking-tight font-extrabold text-gray-800 sm:text-5xl md:text-6xl" 
+            className="text-4xl tracking-tight font-extrabold text-gray-800 pb-4 sm:text-5xl md:text-6xl" 
             variants={itemVariants}
           >
             <span className="block">Software Solutions and Digital Transformation Services aimed at</span>
@@ -147,13 +147,13 @@ const Hero = () => {
           </motion.h1>
           
           <motion.h2
-            className="mt-3 mx-auto text-xl sm:text-2xl md:mt-4 text-gray-600 whitespace-normal sm:whitespace-nowrap text-center"
+            className="mt-3 mx-auto text-xl pb-4 sm:text-2xl md:mt-4 text-gray-600 whitespace-normal sm:whitespace-nowrap text-center"
             variants={itemVariants}
           >
             Digital Transformation | Enterprise Platforms | Custom Software Development
           </motion.h2>          
           <motion.p 
-            className="mt-3 max-w-md mx-auto text-base text-gray-500 sm:text-lg md:mt-5 md:text-xl md:max-w-3xl"
+            className="mt-3 pb-4 max-w-md mx-auto text-base text-gray-500 sm:text-lg md:mt-5 md:text-xl md:max-w-3xl"
             variants={itemVariants}
           >
             At Elovient Software Solutions, we architect and deliver systems that fit how your business actually works. We lead digital transformation by combining custom builds with smart integrations, delivering affordable enterprise software solutions and cloud based software solutions that are secure, reliable and built to scale. Expect clear KPIs, faster processes and measurable value across teams.
