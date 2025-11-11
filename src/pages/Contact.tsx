@@ -46,8 +46,47 @@ const Contact = () => {
     });
 
     const { trackFormSubmit } = GoogleAnalyticsTags()
-
+    const [isDragging, setIsDragging] = useState(false);
     const [loading, setLoading] = useState(false);
+
+    const handleDragOver = (e: React.DragEvent<HTMLDivElement>) => {
+  e.preventDefault();
+  setIsDragging(true);
+};
+
+const handleDragLeave = (e: React.DragEvent<HTMLDivElement>) => {
+  e.preventDefault();
+  setIsDragging(false);
+};
+
+  const handleDrop = (e: React.DragEvent<HTMLDivElement>) => {
+      e.preventDefault();
+      setIsDragging(false);
+      const file = e.dataTransfer.files[0];
+      if (file) {
+        if (file.size > 10 * 1024 * 1024) {
+          setFormErrors((prev) => ({
+            ...prev,
+            fileUpload: "File size must be less than 10MB",
+          }));
+          return;
+        }
+        const allowedTypes = [
+          "application/pdf",
+          "application/msword",
+          "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+        ];
+        if (!allowedTypes.includes(file.type)) {
+          setFormErrors((prev) => ({
+            ...prev,
+            fileUpload: "Only PDF and DOCX files are allowed",
+          }));
+          return;
+        }
+        setFormData((prev) => ({ ...prev, fileUpload: file }));
+        setFormErrors((prev) => ({ ...prev, fileUpload: "" }));
+      }
+    };
 
     const handleChange = (
       e: any
@@ -80,7 +119,7 @@ const Contact = () => {
         setFormData((prev) => ({ ...prev, [name]: value }));
       }
     };
-
+    
     const handleExcelSheetEntry = (templateParams: any) => {
       const formBody = Object.entries(templateParams)
         .map(([key, value]: any) => encodeURIComponent(key) + '=' + encodeURIComponent(value))
@@ -317,25 +356,38 @@ const Contact = () => {
                 </div>
 
                 <div className="space-y-2">
-                  <Label htmlFor="enquiryType" className="font-semibold">
+                  <Label htmlFor="enquiryType" className="leading-tight">
                     Enquiry Type <span className="text-red-500">*</span>
                   </Label>
-                  <select
-                    id="enquiryType"
-                    name="enquiryType"
-                    className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-base ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 md:text-sm"
-                    value={formData.enquiryType}
-                    onChange={handleChange}
-                  >
-                    <option value="">Select</option>
-                    <option value="custom-software">Custom Software Development</option>
-                    <option value="saas-paas">SaaS & PaaS Development</option>
-                    <option value="enterprise-modernization">Enterprise Application Modernization</option>
-                    <option value="ai-solutions">AI & Data Solutions</option>
-                    <option value="system-integration">System Integration</option>
-                    <option value="consulting">Technology Consulting</option>
-                    <option value="other">Other</option>
-                  </select>
+
+                  <div className="relative">
+                    <select
+                      id="enquiryType"
+                      name="enquiryType"
+                      className="block w-full rounded-md border border-input bg-background px-3 py-2.5 pr-8 text-sm
+                                leading-tight text-gray-500 font-small focus-visible:outline-none focus-visible:ring-2
+                                focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed
+                                disabled:opacity-50 appearance-none"
+                      value={formData.enquiryType}
+                      onChange={handleChange}
+                    >
+                      <option value="" >Select</option>
+                      <option value="custom-software">I need a service/solution.</option>
+                      <option value="saas-paas">I want to collaborate/partner.</option>
+                      <option value="enterprise-modernization">I want to explore job opportunities.</option>
+                    </select>
+
+                    {/* Default-style dropdown arrow */}
+                    <svg
+                      className="absolute right-3 top-1/2 -translate-y-1/2 h-4 w-4 text-gray-500 pointer-events-none"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                    </svg>
+                  </div>
+
                   {formErrors.enquiryType && (
                     <p className="text-red-500 text-sm">{formErrors.enquiryType}</p>
                   )}
@@ -357,7 +409,7 @@ const Contact = () => {
 
                 {/* 🆕 Role/Designation moved here */}
                 <div className="space-y-2">
-                  <Label htmlFor="role" className="font-semibold">
+                  <Label htmlFor="role">
                     Role/Designation (Optional)
                   </Label>
                   <Input
@@ -395,10 +447,20 @@ const Contact = () => {
               </p>
 
               <div className="space-y-2">
-                <Label className="font-semibold">
+                <Label className="font-semibold leading-tight">
                   Please share any relevant documents to help us understand your query better
                 </Label>
-                <div className="border-2 border-dashed border-purple-300 rounded-lg p-8 text-center bg-purple-50/30 hover:bg-purple-50/50 transition-colors cursor-pointer">
+                <div
+                  className={`border-2 border-dashed rounded-lg p-8 text-center transition-colors cursor-pointer ${
+                    isDragging
+                      ? "border-purple-500 bg-purple-100"
+                      : "border-purple-300 bg-purple-50/30 hover:bg-purple-50/50"
+                  }`}
+                  onDragOver={handleDragOver}
+                  onDragLeave={handleDragLeave}
+                  onDrop={handleDrop}
+                  onClick={() => document.getElementById("fileUpload")?.click()}
+                >
                   <input
                     type="file"
                     id="fileUpload"
@@ -412,9 +474,13 @@ const Contact = () => {
                       <Upload className="h-8 w-8 text-primary" />
                     </div>
                     <p className="text-gray-700 font-medium mb-1">
-                      {formData.fileUpload ? formData.fileUpload.name : "Click to upload or drag & drop your file"}
+                      {formData.fileUpload
+                        ? formData.fileUpload.name
+                        : "Click to upload or drag & drop your file"}
                     </p>
-                    <p className="text-sm text-gray-500">Max 10 MB permitted, supported file extensions are (PDF and Docx)</p>
+                    <p className="text-sm text-gray-500">
+                      Max 10 MB permitted, supported file extensions are (PDF and DOCX)
+                    </p>
                   </label>
                 </div>
                 {formErrors.fileUpload && (
