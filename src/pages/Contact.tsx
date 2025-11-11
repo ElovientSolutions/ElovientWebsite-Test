@@ -364,14 +364,13 @@ const handleDragLeave = (e: React.DragEvent<HTMLDivElement>) => {
                     <select
                       id="enquiryType"
                       name="enquiryType"
-                      className="block w-full rounded-md border border-input bg-background px-3 py-2.5 pr-8 text-sm
-                                leading-tight text-gray-500 font-small focus-visible:outline-none focus-visible:ring-2
-                                focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed
+                      className="block w-full rounded-md border border-input bg-background px-3 py-2.5 pr-8 focus-visible:outline-none focus-visible:ring-2
+                                text-sm focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed
                                 disabled:opacity-50 appearance-none"
                       value={formData.enquiryType}
                       onChange={handleChange}
                     >
-                      <option value="" >Select</option>
+                      <option value="" className="text-sm leading-tight text-gray-500 font-small">Select</option>
                       <option value="custom-software">I need a service/solution.</option>
                       <option value="saas-paas">I want to collaborate/partner.</option>
                       <option value="enterprise-modernization">I want to explore job opportunities.</option>
