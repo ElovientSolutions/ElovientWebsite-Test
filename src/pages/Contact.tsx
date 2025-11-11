@@ -208,21 +208,37 @@ const handleDragLeave = (e: React.DragEvent<HTMLDivElement>) => {
         if (response.status === 200) {
           toast({
             description: (
-              <div className="flex flex-col">
-                <div className="flex items-center gap-2 mb-1">
-                  <svg className="h-5 w-5 text-green-600 flex-shrink-0" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" /></svg>
-                  <span className="text-green-700 text-base font-bold">Thank you for reaching out to Elovient Software Solutions.</span>
+              <div className="flex items-start gap-3">
+                <div className="flex-shrink-0 flex items-center justify-center rounded-full bg-green-100 p-1.5">
+                  <svg
+                    className="h-4 w-4 text-green-600"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    viewBox="0 0 24 24"
+                  >
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+                  </svg>
                 </div>
-                <span className="text-green-800">
-                  <span className="font-semibold">We've received your inquiry and will get back to you within 24 working hours.</span><br />
-                  Our team looks forward to connecting with you soon.
-                </span>
+
+                <div className="flex flex-col text-sm leading-relaxed">
+                  <span className="text-green-800 font-medium">
+                    Thank you for reaching out to Elovient Software Solutions.
+                  </span>
+                  <span className="text-green-700 mt-1">
+                    We’ve received your inquiry and will get back to you within 24 working hours.
+                  </span>
+                  <span className="text-green-700">
+                    Our team looks forward to connecting with you soon.
+                  </span>
+                </div>
               </div>
             ),
-            className: "border-green-400 bg-green-50 text-green-900 shadow-lg",
+            className:
+              "border border-green-300 bg-green-50 text-green-800 shadow-md rounded-md",
             variant: "default",
           });
-          // Reset form after successful submission
+                    // Reset form after successful submission
           setFormData({
             name: "",
             email: "",
@@ -357,7 +373,7 @@ const handleDragLeave = (e: React.DragEvent<HTMLDivElement>) => {
 
                 <div className="space-y-2">
                   <Label htmlFor="enquiryType" className="leading-tight">
-                    Enquiry Type <span className="text-red-500">*</span>
+                    Enquiry Type
                   </Label>
 
                   <div className="relative">

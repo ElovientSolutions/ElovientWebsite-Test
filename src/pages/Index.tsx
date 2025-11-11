@@ -269,7 +269,7 @@ const Index = () => {
             ))}
           </div>
 
-          <div className="text-center mt-6 mb-20 sm:mb-0">
+          <div className="text-center mt-6 sm:mb-0">
             <Button asChild className="px-6">
               <Link to="/services">View All Services</Link>
             </Button>
@@ -278,7 +278,7 @@ const Index = () => {
       </section>
 
       {/* AI First Solutions Section */}
-      <section className="relative py-20 px-4 sm:px-6 lg:px-8">
+      <section className="relative px-4 sm:px-6 lg:px-8 pt-36 sm:pt-0">
         <div className="max-w-6xl mx-auto">
           <div className="relative bg-[#f6f3ff] rounded-3xl p-8 sm:p-12 mb-8 overflow-visible">
             
