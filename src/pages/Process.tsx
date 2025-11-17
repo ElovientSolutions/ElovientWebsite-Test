@@ -190,7 +190,9 @@ const Process = () => {
                 className="bg-white p-6 rounded-lg shadow-sm border-l-4 border-primary hover:shadow-md transition-shadow"
               >
                 <div className="flex items-center mb-3">
-                  <CheckCircle className="h-5 w-5 text-primary mr-2" />
+                  <div className="h-5 w-5 text-primary mr-2 flex items-center justify-center shrink-0">
+                    <CheckCircle className="h-5 w-5" />
+                  </div>
                   <h3 className="text-xl font-semibold text-gray-900">
                     {reason.title}
                   </h3>

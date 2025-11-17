@@ -95,7 +95,6 @@ const handleDragLeave = (e: React.DragEvent<HTMLDivElement>) => {
 
       if (name === "fileUpload" && files) {
         const file = files[0];
-        // Validate file size (10MB = 10 * 1024 * 1024 bytes)
         if (file && file.size > 10 * 1024 * 1024) {
           setFormErrors((prev) => ({ ...prev, fileUpload: "File size must be less than 10MB" }));
           return;
@@ -109,7 +108,6 @@ const handleDragLeave = (e: React.DragEvent<HTMLDivElement>) => {
         setFormData((prev) => ({ ...prev, [name]: file }));
         setFormErrors((prev) => ({ ...prev, fileUpload: "" }));
       } else if (name === "phone") {
-        // Allow only digits and a single optional leading '+'
         const sanitizedValue = value
           .replace(/[^\d+]/g, "") // Remove all except digits and '+'
           .replace(/(?!^)\+/g, ""); // Remove '+' if not at the start
