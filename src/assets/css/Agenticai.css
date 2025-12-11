@@ -1,11 +1,13 @@
-/* --- ICON STYLING --- */
-
 .ai-icon {
   width: 28px;
   height: 28px;
   display: inline-block;
   margin-right: 10px;
   vertical-align: middle;
+}
+
+.text-purple {
+  color: #6f48db !important;
 }
 
 .ai-list li {
@@ -16,15 +18,123 @@
   line-height: 1.6;
 }
 
-/* Capability icon */
 .cap-icon {
   width: 40px;
   height: 40px;
   margin-bottom: 12px;
 }
 
-/* Section background fix */
 .bg-f1 {
   background: #F1F2FF;
 }
 
+.agentic-hero {
+  padding: 20px;
+  margin-top: 45px;
+}
+
+.agentic-container {
+  padding-right: 25%;
+}
+
+.agentic-btn {
+  background-color: #8560EE !important;
+  padding: 8px 40px !important;
+  border-radius: 60px !important;
+  color: white !important;
+  font-weight: 500;
+  display: inline-block;
+  transition: 0.25s ease;
+}
+
+.agentic-btn:hover {
+  background-color: #6f48db !important;
+}
+
+.agentic-btn-full {
+  width: 80%;
+  margin: 1px auto;
+}
+
+.gradient-btn {
+  background: linear-gradient(90deg, #6833ff 0%, #0095ff 47.6%, #00bfb8 100%) !important;
+}
+
+.cap-box {
+  background: #F1F2FF;
+  padding: 40px;
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  height: 100%;
+  position: relative;
+}
+
+.cap-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+}
+
+.cap-text {
+  color: #4a4a4a;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.cap-image-overlay {
+  position: relative;
+  z-index: 10;
+  padding: 24px;
+  color: white;
+  text-align: left;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  backdrop-filter: blur(6px);
+  background: rgba(0,0,0,0.35);
+  border-radius: 16px;
+}
+
+.cap-box img.absolute {
+  z-index: 1;
+}
+
+.cap-image-bottom {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding-bottom: 30px;
+  padding-top: 30px;
+  text-align: center;
+}
+
+.sync-box {
+  background: #ffffff;
+  padding: 24px;
+  border-radius: 15px;
+  box-shadow: 0px 2px 10px rgba(0,0,0,0.06);
+  transition: 0.2s ease;
+}
+
+.sync-box:hover {
+  box-shadow: 0px 4px 16px rgba(0,0,0,0.08);
+}
+
+.sync-icon {
+  width: 60px;
+  height: 60px;
+  flex-shrink: 0;
+}
+
+.md\:col-span-4,
+.md\:col-span-8 {
+  display: flex;
+  flex-direction: column;
+}
+
+.right-blur-box {
+  border: 3px solid white;
+}
