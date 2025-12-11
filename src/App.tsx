@@ -7,6 +7,7 @@ import ScrollToTop from "./lib/ScrollToTop";
 import Footer from "./components/Footer";
 import Index from "./pages/Index";
 import Services from "./pages/Services";
+import Agenticai from "./pages/Agenticai";
 import About from "./pages/About";
 import Industries from "./pages/Industries";
 import Process from "./pages/Process";
@@ -27,6 +28,7 @@ const App = () => (
           <Routes>
             <Route path="/" element={<Index />} />
             <Route path="/about" element={<About />} />
+            <Route path="/agentic-ai" element={<Agenticai />} />
             <Route path="/services" element={<Services />} />
             <Route path="/industries" element={<Industries />} />
             <Route path="/process" element={<Process />} />

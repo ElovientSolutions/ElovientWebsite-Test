@@ -1,0 +1,30 @@
+/* --- ICON STYLING --- */
+
+.ai-icon {
+  width: 28px;
+  height: 28px;
+  display: inline-block;
+  margin-right: 10px;
+  vertical-align: middle;
+}
+
+.ai-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+/* Capability icon */
+.cap-icon {
+  width: 40px;
+  height: 40px;
+  margin-bottom: 12px;
+}
+
+/* Section background fix */
+.bg-f1 {
+  background: #F1F2FF;
+}
+
