@@ -1,3 +1,5 @@
+/* Agenticai.css - full file content */
+
 .ai-icon {
   width: 28px;
   height: 28px;
@@ -137,4 +139,140 @@
 
 .right-blur-box {
   border: 3px solid white;
+}
+
+.cap-image-wrapper img.absolute {
+  object-fit: cover;
+}
+
+@media (max-width: 1024px) {
+  .agentic-container {
+    padding-right: 0; 
+  }
+}
+
+@media (max-width: 768px) {
+  .stats-section .stats-left {
+    width: 100% !important;
+    display: flex;
+    justify-content: center;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .stats-section .stats-left > div {
+    width: 100% !important;
+    max-width: 760px;
+  }
+
+  .capabilities-grid {
+    display: grid;
+    grid-template-columns: 1fr !important;
+    gap: 20px;
+  }
+  .right-blur-box{
+    border: none;
+  }
+
+  .stats-2{
+    border-radius: 15px;
+    overflow: hidden;
+    border: 3px solid #fff;
+  }
+  .stats-2-sub {
+    border-bottom-left-radius: 0px !important;
+  }
+  .cap-image-wrapper {
+    order: 2;
+  }
+
+  .capabilities-grid > .cap-box {
+    order: 1;
+  }
+
+  .journey-grid {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  .sync-icon {
+    width: 48px;
+    height: 48px;
+  }
+
+  .agentic-hero {
+    padding: 16px;
+    margin-top: 30px;
+  }
+}
+@media (max-width: 420px) {
+  .ai-icon {
+    width: 22px;
+    height: 22px;
+    margin-right: 8px;
+  }
+
+  .ai-list li {
+    font-size: 16px;
+    gap: 8px;
+  }
+
+  .cap-box {
+    padding: 20px;
+  }
+
+  .cap-icon {
+    width: 36px;
+    height: 36px;
+    margin-bottom: 10px;
+  }
+
+  .agentic-btn {
+    padding: 8px 26px !important;
+  }
+
+  .agentic-btn-full {
+    width: 90%;
+  }
+
+  .sync-icon {
+    width: 44px;
+    height: 44px;
+  }
+
+  .cap-image-overlay {
+    padding: 18px;
+  }
+}
+
+@media (max-width: 360px) {
+  .agentic-hero h1 {
+    font-size: 1.6rem;
+    line-height: 1.15;
+  }
+
+  .agentic-hero p {
+    font-size: 0.95rem;
+  }
+
+  .cap-text {
+    font-size: 0.95rem;
+  }
+
+  .cap-title {
+    font-size: 1.15rem;
+  }
+
+  .agentic-container {
+    padding-right: 0;
+  }
+}
+
+.cap-image-wrapper img.absolute {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.cap-box:hover {
+  transform: none;
 }

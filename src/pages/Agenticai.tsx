@@ -1,3 +1,4 @@
+import React from "react";
 import Navbar from "@/components/Navbar";
 import Seo from "@/components/Seo";
 import "@/assets/css/Agenticai.css";
@@ -65,15 +66,15 @@ const AgenticAI = () => {
 
             <ul className="ai-list space-y-3 text-gray-700 text-lg">
               <li>
-                <img src={tickIcon} className="ai-icon" />
+                <img src={tickIcon} className="ai-icon" alt="tick" />
                 Automate repetitive tasks so loops close faster & hours return to teams
               </li>
               <li>
-                <img src={tickIcon} className="ai-icon" />
+                <img src={tickIcon} className="ai-icon" alt="tick" />
                 Serve the right insight at the right moment so decisions improve & rework drops
               </li>
               <li>
-                <img src={tickIcon} className="ai-icon" />
+                <img src={tickIcon} className="ai-icon" alt="tick" />
                 We execute AI solutions across all industries & technologies
               </li>
             </ul>
@@ -86,11 +87,11 @@ const AgenticAI = () => {
       </section>
 
       <section
-        className="w-full py-20 text-white bg-cover bg-center"
+        className="w-full py-20 text-white bg-cover bg-center stats-section"
         style={{ backgroundImage: `url(${statsBg})` }}
       >
         <div className="w-full flex justify-start">
-          <div className="w-1/2 flex justify-end px-6">
+          <div className="w-1/2 flex justify-end px-6 stats-left">
             <div className="w-full md:w-2/3 bg-black/40 backdrop-blur-md p-8 rounded-2xl shadow-xl">
               <div className="flex mb-8">
                 <div className="w-1/3">
@@ -120,7 +121,7 @@ const AgenticAI = () => {
         <div className="max-w-7xl mx-auto">
           <div className="grid md:grid-cols-3 gap-10 mb-16">
             <div className="cap-box">
-              <img src={aiAutomationIcon} className="cap-icon" />
+              <img src={aiAutomationIcon} className="cap-icon" alt="AI Automation" />
               <h3 className="cap-title">AI Automation (RPA & IPA)</h3>
               <p className="cap-text">
                 Automating high-volume, repetitive, & rule-based tasks to boost operational efficiency, ensure
@@ -129,7 +130,7 @@ const AgenticAI = () => {
             </div>
 
             <div className="cap-box">
-              <img src={genAiIcon} className="cap-icon" />
+              <img src={genAiIcon} className="cap-icon" alt="Generative AI" />
               <h3 className="cap-title">Generative AI Solutions</h3>
               <p className="cap-text">
                 Leveraging the power of Large Language Models (LLMs) to create high-quality content, power
@@ -138,7 +139,7 @@ const AgenticAI = () => {
             </div>
 
             <div className="cap-box">
-              <img src={mlMLOpsIcon} className="cap-icon" />
+              <img src={mlMLOpsIcon} className="cap-icon" alt="MLOps" />
               <h3 className="cap-title">Machine Learning & MLOps</h3>
               <p className="cap-text">
                 Building, training, & deploying custom machine learning models for predictive analytics &
@@ -147,17 +148,17 @@ const AgenticAI = () => {
             </div>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-10 items-stretch">
+          <div className="grid md:grid-cols-3 gap-10 items-stretch capabilities-grid">
             <div className="cap-box">
-              <img src={etlIcon} className="cap-icon" />
+              <img src={etlIcon} className="cap-icon" alt="ETL" />
               <h3 className="cap-title">ETL & Data Pipelining</h3>
               <p className="cap-text">
                 Architecting high-performance, tech-agnostic data pipelines. We build the "fuel" for advanced AI by ensuring that your systems are fed with clean, accurate, & real-time data from any source
               </p>
             </div>
 
-            <div className="md:col-span-2 relative rounded-xl overflow-hidden shadow-lg">
-              <img src={agenticBg} className="absolute inset-0 w-full h-full object-cover" />
+            <div className="md:col-span-2 relative rounded-xl overflow-hidden shadow-lg cap-image-wrapper">
+              <img src={agenticBg} className="absolute inset-0 w-full h-full object-cover" alt="Agentic background" />
 
               <div className="cap-image-overlay cap-image-bottom">
                 <h3 className="text-3xl font-bold mb-4">Agentic AI: The Autonomous Enterprise</h3>
@@ -179,7 +180,7 @@ const AgenticAI = () => {
 
           <div className="space-y-8">
             <div className="sync-box flex items-start gap-6">
-              <img src={alignCommIcon} className="sync-icon" />
+              <img src={alignCommIcon} className="sync-icon" alt="align" />
               <div>
                 <h3 className="text-2xl font-semibold mb-2">Align your commercial teams</h3>
                 <p className="text-gray-700 text-lg">
@@ -189,7 +190,7 @@ const AgenticAI = () => {
             </div>
 
             <div className="sync-box flex items-start gap-6">
-              <img src={singleViewIcon} className="sync-icon" />
+              <img src={singleViewIcon} className="sync-icon" alt="single view" />
               <div>
                 <h3 className="text-2xl font-semibold mb-2">Get a single, unified view</h3>
                 <p className="text-gray-700 text-lg">
@@ -199,7 +200,7 @@ const AgenticAI = () => {
             </div>
 
             <div className="sync-box flex items-start gap-6">
-              <img src={streamlineIcon} className="sync-icon" />
+              <img src={streamlineIcon} className="sync-icon" alt="streamline" />
               <div>
                 <h3 className="text-2xl font-semibold mb-2">Streamline your core processes</h3>
                 <p className="text-gray-700 text-lg">
@@ -212,12 +213,12 @@ const AgenticAI = () => {
       </section>
 
       <section
-        className="py-24 bg-cover bg-center"
+        className="py-24 bg-cover bg-center sync-cta"
         style={{ backgroundImage: `url(${syncBg})` }}
       >
         <div className="max-w-5xl mx-auto px-6">
-          <div className="flex flex-col md:flex-row md:h-full">
-            <div className="w-full md:w-[35%] bg-white rounded-l-xl p-8 shadow-lg flex flex-col justify-center">
+          <div className="flex flex-col md:flex-row md:h-full stats-2">
+            <div className="w-full md:w-[35%] bg-white rounded-l-xl p-8 shadow-lg flex flex-col justify-center stats-2-sub">
               <p className="text-4xl font-bold text-gray-900 mb-3 text-purple">43%</p>
               <p className="text-lg text-gray-700">
                 Companies have prioritised AI-tech training for their members
@@ -236,7 +237,7 @@ const AgenticAI = () => {
       </section>
 
       <section className="py-20 px-6">
-        <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-14 items-center">
+        <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-14 items-center journey-grid">
           <div>
             <h2 className="text-4xl font-bold text-gray-900 mb-5">Start your AI journey with us</h2>
 
