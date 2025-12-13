@@ -144,14 +144,27 @@
 .cap-image-wrapper img.absolute {
   object-fit: cover;
 }
+.no-blur{
+  -webkit-backdrop-filter: blur(0px) !important;
+    backdrop-filter: blur(0px) !important;
+}
 
 @media (max-width: 1024px) {
   .agentic-container {
     padding-right: 0; 
   }
 }
+  .tl-center{
+    text-align: center;
+  }
 
 @media (max-width: 768px) {
+  .custom-mb {
+    margin-bottom: 2.5rem !important;
+  }
+  .cap-image-overlay{
+    min-height: 300px;
+  }
   .stats-section .stats-left {
     width: 100% !important;
     display: flex;
@@ -201,7 +214,7 @@
 
   .agentic-hero {
     padding: 16px;
-    margin-top: 30px;
+    margin-top: 45px;
   }
 }
 @media (max-width: 420px) {
@@ -227,11 +240,11 @@
   }
 
   .agentic-btn {
-    padding: 8px 26px !important;
+    padding: 8px 35px !important;
   }
 
   .agentic-btn-full {
-    width: 90%;
+    width: 100%;
   }
 
   .sync-icon {

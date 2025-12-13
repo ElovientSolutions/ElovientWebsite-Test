@@ -32,12 +32,17 @@ const AgenticAI = () => {
 
       <Navbar />
 
+      {/* HERO */}
       <div className="agentic-hero px-4 md:px-8 lg:px-12 py-6">
         <section
-          className="w-full min-h-[80vh] flex items-center bg-cover bg-center rounded-2xl overflow-hidden agentic-container"
+          className="w-full min-h-[80vh] flex items-end bg-cover bg-center rounded-2xl overflow-hidden agentic-container"
           style={{ backgroundImage: `url(${heroBg})` }}
         >
-          <div className="w-full px-6 md:px-10 lg:px-16 py-10">
+          <div className="w-full 
+            pl-6 sm:pl-12 md:pl-20 lg:pl-28 
+            pb-16 sm:pb-20 md:pb-24 lg:pb-28
+            pr-6"
+          >
             <div className="max-w-7xl text-left text-white drop-shadow-xl">
               <h1 className="text-4xl sm:text-5xl font-bold leading-tight mb-4">
                 From Insight to Autonomy: Elovient's end-to-end AI Services
@@ -48,12 +53,15 @@ const AgenticAI = () => {
                 moving beyond simple automation to build autonomous, goal-driven operations.
               </p>
 
-              <button className="agentic-btn">Start your AI-enabled journey</button>
+              <a href="/contact">
+                <button className="agentic-btn">Start your AI-enabled journey</button>
+              </a>
             </div>
           </div>
         </section>
       </div>
 
+      {/* INTEGRATED AI */}
       <section className="py-20 px-6">
         <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
           <div>
@@ -86,6 +94,7 @@ const AgenticAI = () => {
         </div>
       </section>
 
+      {/* STATS */}
       <section
         className="w-full py-20 text-white bg-cover bg-center stats-section"
         style={{ backgroundImage: `url(${statsBg})` }}
@@ -111,15 +120,22 @@ const AgenticAI = () => {
                 </div>
               </div>
 
-              <button className="agentic-btn agentic-btn-full">Start your AI-enabled journey</button>
+              <div className="tl-center">
+                <a href="/contact">
+                  <button className="agentic-btn agentic-btn-full">
+                    Start your AI-enabled journey
+                  </button>
+                </a>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
+      {/* CAPABILITIES */}
       <section className="py-20 px-6">
         <div className="max-w-7xl mx-auto">
-          <div className="grid md:grid-cols-3 gap-10 mb-16">
+          <div className="grid md:grid-cols-3 gap-10 mb-16 custom-mb">
             <div className="cap-box">
               <img src={aiAutomationIcon} className="cap-icon" alt="AI Automation" />
               <h3 className="cap-title">AI Automation (RPA & IPA)</h3>
@@ -160,12 +176,14 @@ const AgenticAI = () => {
             <div className="md:col-span-2 relative rounded-xl overflow-hidden shadow-lg cap-image-wrapper">
               <img src={agenticBg} className="absolute inset-0 w-full h-full object-cover" alt="Agentic background" />
 
-              <div className="cap-image-overlay cap-image-bottom">
+              <div className="cap-image-overlay cap-image-bottom no-blur">
                 <h3 className="text-3xl font-bold mb-4">Agentic AI: The Autonomous Enterprise</h3>
 
-                <button className="agentic-btn agentic-btn-full gradient-btn">
-                  Contact us for Agentic AI Solutions
-                </button>
+                <a href="/contact">
+                  <button className="agentic-btn agentic-btn-full gradient-btn">
+                    Contact us for Agentic AI Solutions
+                  </button>
+                </a>
               </div>
             </div>
           </div>
@@ -179,7 +197,7 @@ const AgenticAI = () => {
           </h2>
 
           <div className="space-y-8">
-            <div className="sync-box flex items-start gap-6">
+            <div className="sync-box flex items-start md:items-center gap-6">
               <img src={alignCommIcon} className="sync-icon" alt="align" />
               <div>
                 <h3 className="text-2xl font-semibold mb-2">Align your commercial teams</h3>
@@ -189,7 +207,7 @@ const AgenticAI = () => {
               </div>
             </div>
 
-            <div className="sync-box flex items-start gap-6">
+            <div className="sync-box flex items-start md:items-center gap-6">
               <img src={singleViewIcon} className="sync-icon" alt="single view" />
               <div>
                 <h3 className="text-2xl font-semibold mb-2">Get a single, unified view</h3>
@@ -199,7 +217,7 @@ const AgenticAI = () => {
               </div>
             </div>
 
-            <div className="sync-box flex items-start gap-6">
+            <div className="sync-box flex items-start md:items-center gap-6">
               <img src={streamlineIcon} className="sync-icon" alt="streamline" />
               <div>
                 <h3 className="text-2xl font-semibold mb-2">Streamline your core processes</h3>
@@ -209,6 +227,7 @@ const AgenticAI = () => {
               </div>
             </div>
           </div>
+
         </div>
       </section>
 
@@ -226,31 +245,42 @@ const AgenticAI = () => {
             </div>
 
             <div className="w-full md:w-[65%] bg-white/20 backdrop-blur-md rounded-r-xl p-10 shadow-xl flex flex-col justify-between right-blur-box">
-              <h3 className="text-2xl font-bold text-white mb-6">
+              <h3 className="text-2xl font-bold text-white mb-6 tl-m-center">
                 We support AI-tech training initiatives for our partners & their workforce
               </h3>
 
-              <button className="agentic-btn agentic-btn-full mt-6">Contact Us</button>
+              <a href="/contact">
+                <button className="agentic-btn agentic-btn-full mt-6">Contact Us</button>
+              </a>
             </div>
           </div>
         </div>
       </section>
 
-      <section className="py-20 px-6">
+      {/* FINAL CTA */}
+      <section className="py-20 px-6 tl-m-center">
         <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-14 items-center journey-grid">
-          <div>
-            <h2 className="text-4xl font-bold text-gray-900 mb-5">Start your AI journey with us</h2>
+          <div className="order-2 md:order-1">
+            <h2 className="text-4xl font-bold text-gray-900 mb-5">
+              Start your AI journey with us
+            </h2>
 
             <p className="text-lg text-gray-700 mb-6">
-              Elovient is your trusted partner in delivering AI-powered business solutions. We look forward to
-              supporting your growth & success.
+              Elovient is your trusted partner in delivering AI-powered business solutions.
+              We look forward to supporting your growth & success.
             </p>
 
-            <button className="agentic-btn agentic-btn-full">Contact Us</button>
+            <a href="/contact">
+              <button className="agentic-btn agentic-btn-full">Contact Us</button>
+            </a>
           </div>
 
-          <div className="flex justify-center">
-            <img src={journeyImg} alt="Start AI Journey" className="w-full max-w-md rounded-xl shadow-lg" />
+          <div className="flex justify-center order-1 md:order-2">
+            <img
+              src={journeyImg}
+              alt="Start AI Journey"
+              className="w-full max-w-md rounded-xl shadow-lg"
+            />
           </div>
         </div>
       </section>
