@@ -309,3 +309,180 @@
 .cap-box:hover {
   transform: none;
 }
+
+
+/* ===============================
+   GLOBAL RESPONSIVE CONTAINERS
+================================ */
+
+@media (max-width: 1200px) {
+  .custom-container {
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+
+  .custom-container-out {
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .custom-container,
+  .custom-container-out {
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+  }
+}
+
+/* ===============================
+   HERO FIXES
+================================ */
+
+@media (max-width: 768px) {
+  .agentic-container {
+    padding-right: 0;
+  }
+
+  .agentic-hero h1 {
+    font-size: 2rem;
+    line-height: 1.25;
+  }
+
+  .agentic-hero p {
+    font-size: 1rem;
+  }
+}
+
+/* ===============================
+   STATS SECTION FIX
+================================ */
+
+@media (max-width: 1024px) {
+  .stats-height {
+    height: auto;
+  }
+
+  .stats-container {
+    position: relative;
+    margin-top: 0;
+    padding: 0 1rem;
+  }
+
+  .stats-blur-box {
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .stats-blur-box {
+    padding: 20px;
+  }
+
+  .stats-blur-box .flex {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .stats-blur-box .w-1\/3,
+  .stats-blur-box .w-2\/3 {
+    width: 100%;
+  }
+
+  .stats-blur-box p {
+    font-size: 1.75rem;
+  }
+}
+
+/* ===============================
+   CAPABILITIES GRID FIX
+================================ */
+
+@media (max-width: 1024px) {
+  .capabilities-pt {
+    padding-top: 4rem !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .cap-box {
+    padding: 24px;
+  }
+
+  .cap-title {
+    font-size: 1.25rem;
+  }
+
+  .cap-text {
+    font-size: 0.95rem;
+  }
+
+  .cap-image-overlay {
+    min-height: 260px;
+  }
+}
+
+/* ===============================
+   SYNC SECTION FIX
+================================ */
+
+@media (max-width: 768px) {
+  .sync-box {
+    flex-direction: column;
+    text-align: left;
+  }
+
+  .sync-icon {
+    margin-bottom: 10px;
+  }
+}
+
+/* ===============================
+   CTA / STATS-2 FIX
+================================ */
+
+@media (max-width: 768px) {
+  .stats-2 {
+    flex-direction: column;
+  }
+
+  .stats-2-sub,
+  .right-blur-box {
+    width: 100% !important;
+    border-radius: 0 !important;
+  }
+
+  .right-blur-box {
+    padding: 24px;
+  }
+}
+
+/* ===============================
+   BUTTON FIXES
+================================ */
+
+@media (max-width: 768px) {
+  .agentic-btn-full {
+    width: 100%;
+  }
+
+  .agentic-btn {
+    padding: 10px 32px !important;
+  }
+}
+
+/* ===============================
+   FINAL CTA (Journey)
+================================ */
+
+@media (max-width: 768px) {
+  .journey-grid {
+    flex-direction: column-reverse;
+    gap: 24px;
+    text-align: center;
+  }
+
+  .journey-grid h2 {
+    font-size: 2rem;
+  }
+}
