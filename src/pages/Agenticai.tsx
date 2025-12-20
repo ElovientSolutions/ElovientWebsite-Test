@@ -4,7 +4,7 @@ import Seo from "@/components/Seo";
 import "@/assets/css/Agenticai.css";
 
 import heroBg from "@/assets/images/Group 48095980.png";
-import aiImage from "@/assets/images/image 135.png";
+import aiImage from "@/assets/images/image234.png";
 import statsBg from "@/assets/images/image 154.png";
 import agenticBg from "@/assets/images/Rectangle 8021.png";
 import syncBg from "@/assets/images/image 155.png";
@@ -39,9 +39,8 @@ const AgenticAI = () => {
           style={{ backgroundImage: `url(${heroBg})` }}
         >
           <div className="w-full 
-            pl-6 sm:pl-12 md:pl-20 lg:pl-28 
-            pb-16 sm:pb-20 md:pb-24 lg:pb-28
-            pr-6"
+            pb-16 sm:pb-20 md:pb-24 lg:pb-24
+            pr-6 custom-container"
           >
             <div className="max-w-7xl text-left text-white drop-shadow-xl">
               <h1 className="text-4xl sm:text-5xl font-bold leading-tight mb-4">
@@ -62,8 +61,8 @@ const AgenticAI = () => {
       </div>
 
       {/* INTEGRATED AI */}
-      <section className="py-20 px-6">
-        <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+      <section className="py-20 px-3">
+        <div className="grid md:grid-cols-2 gap-12 items-center custom-container-out">
           <div>
             <h2 className="text-3xl font-bold text-gray-900 mb-4">Integrated AI Solutions</h2>
 
@@ -99,9 +98,10 @@ const AgenticAI = () => {
         className="w-full py-20 text-white bg-cover bg-center stats-section"
         style={{ backgroundImage: `url(${statsBg})` }}
       >
-        <div className="w-full flex justify-start">
-          <div className="w-1/2 flex justify-end px-6 stats-left">
-            <div className="w-full md:w-2/3 bg-black/40 backdrop-blur-md p-8 rounded-2xl shadow-xl">
+        <div className="w-full flex justify-start stats-height">
+          
+          <div className="custom-container-out stats-container">
+            <div className="bg-white/20 backdrop-blur-md p-8 rounded-2xl shadow-xl stats-blur-box">
               <div className="flex mb-8">
                 <div className="w-1/3">
                   <p className="text-4xl font-bold">34%</p>
@@ -110,7 +110,6 @@ const AgenticAI = () => {
                   Business tasks are already done by machines. Projected rise to <b>42%</b> by 2027.
                 </div>
               </div>
-
               <div className="flex mb-10">
                 <div className="w-1/3">
                   <p className="text-4xl font-bold">64%</p>
@@ -119,7 +118,6 @@ const AgenticAI = () => {
                   Member bandwidth can be saved with Elovient’s AI-implemented business solutions.
                 </div>
               </div>
-
               <div className="tl-center">
                 <a href="/contact">
                   <button className="agentic-btn agentic-btn-full">
@@ -129,11 +127,12 @@ const AgenticAI = () => {
               </div>
             </div>
           </div>
+
         </div>
       </section>
 
       {/* CAPABILITIES */}
-      <section className="py-20 px-6">
+      <section className="py-20 px-6 capabilities-pt">
         <div className="max-w-7xl mx-auto">
           <div className="grid md:grid-cols-3 gap-10 mb-16 custom-mb">
             <div className="cap-box">
@@ -190,9 +189,9 @@ const AgenticAI = () => {
         </div>
       </section>
 
-      <section className="py-20 px-6 bg-f1">
-        <div className="max-w-5xl mx-auto space-y-12">
-          <h2 className="text-3xl font-bold text-gray-900">
+      <section className="py-20 bg-f1">
+        <div className="w-full custom-container-out">
+          <h2 className="text-3xl font-bold text-gray-900 container text-center mb-10">
             AI that keeps sales, finance, manufacturing & operations in sync
           </h2>
 
@@ -258,8 +257,8 @@ const AgenticAI = () => {
       </section>
 
       {/* FINAL CTA */}
-      <section className="py-20 px-6 tl-m-center">
-        <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-14 items-center journey-grid">
+      <section className="py-20 tl-m-center">
+        <div className="grid md:grid-cols-2 gap-14 items-center journey-grid custom-container-out">
           <div className="order-2 md:order-1">
             <h2 className="text-4xl font-bold text-gray-900 mb-5">
               Start your AI journey with us

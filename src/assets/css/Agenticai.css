@@ -7,7 +7,27 @@
   margin-right: 10px;
   vertical-align: middle;
 }
-
+.custom-container{
+  padding-left: 6rem;
+  padding-right: 6rem;
+}
+.custom-container-out{
+  padding-left: 8rem;
+  padding-right: 8rem;
+}
+.stats-blur-box{
+  width: calc(50vw - 6rem);
+}
+.stats-height{
+  height: 300px;
+}
+.stats-container {
+  position: absolute;
+  margin-top: 170px;
+}
+.capabilities-pt {
+  padding-top: 10rem !important;
+}
 .text-purple {
   color: #6f48db !important;
 }
@@ -32,7 +52,7 @@
 
 .agentic-hero {
   padding: 20px;
-  margin-top: 45px;
+  margin-top: 60px;
 }
 
 .agentic-container {
