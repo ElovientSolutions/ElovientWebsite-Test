@@ -6,7 +6,7 @@ import "@/assets/css/Agenticai.css";
 import heroBg from "@/assets/images/Group 48095980.png";
 import aiImage from "@/assets/images/image234.png";
 import statsBg from "@/assets/images/image 154.png";
-import agenticBg from "@/assets/images/Rectangle 8021.png";
+import agenticBg from "@/assets/images/image46.png";
 import syncBg from "@/assets/images/image 155.png";
 import journeyImg from "@/assets/images/image 138.png";
 
