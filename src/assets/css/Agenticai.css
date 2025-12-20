@@ -259,10 +259,6 @@
     margin-bottom: 10px;
   }
 
-  .agentic-btn {
-    padding: 8px 35px !important;
-  }
-
   .agentic-btn-full {
     width: 100%;
   }
@@ -467,7 +463,8 @@
   }
 
   .agentic-btn {
-    padding: 10px 32px !important;
+    padding: 10px 5px !important;
+    min-width: 255px;
   }
 }
 

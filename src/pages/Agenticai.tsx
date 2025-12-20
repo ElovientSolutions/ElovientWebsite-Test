@@ -103,7 +103,7 @@ const AgenticAI = () => {
           <div className="custom-container-out stats-container">
             <div className="bg-white/20 backdrop-blur-md p-8 rounded-2xl shadow-xl stats-blur-box">
               <div className="flex mb-8">
-                <div className="w-1/3">
+                <div className="w-1/4 md:px-10">
                   <p className="text-4xl font-bold">34%</p>
                 </div>
                 <div className="w-2/3 text-lg">
@@ -111,7 +111,7 @@ const AgenticAI = () => {
                 </div>
               </div>
               <div className="flex mb-10">
-                <div className="w-1/3">
+                <div className="w-1/4 md:px-10">
                   <p className="text-4xl font-bold">64%</p>
                 </div>
                 <div className="w-2/3 text-lg">
